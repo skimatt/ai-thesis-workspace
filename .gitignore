@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+venv/
+.venv/
+
+# Temporary Office Lock files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# OS generated files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+.DS_Store
+[Dd]esktop.ini
+
+# Temporary cache in AI_program (kecuali .gitkeep)
+AI_program/temp/*
+!AI_program/temp/.gitkeep
+AI_program/logs/*
+!AI_program/logs/.gitkeep

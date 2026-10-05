@@ -1,0 +1,24 @@
+FIRST TASK: WORKSPACE SYNCHRONIZATION & READINESS CHECK
+
+Anda beroperasi di workspace penulisan skripsi akademik Informatika Universitas Almuslim.
+Tugas pertama Anda adalah memahami lingkungan kerja ini secara mendalam tanpa mengubah berkas apa pun.
+
+BACA DAN PAHAMI DENGAN URUTAN BERJENJANG:
+1. AGENTS.md (Master Governance v2.0 & Hierarki Aturan 6-Level)
+2. CONTEXT_SKRIPSI.txt / konteks.txt (Identitas, Metode, & Status Data Penelitian)
+3. SOP/INDEX_SOP.md (Pemetaan SOP Penulisan, Format, Diagram, Referensi, & Integritas)
+4. REFERENSI/index.md (Katalog Pustaka Terverifikasi)
+
+PRINSIP UTAMA (STRICT ENFORCEMENT):
+- DO NOT INVENT (Dilarang mengarang informasi, regulasi, atau teori fiktif).
+- NO SOURCE, NO CLAIM (Dilarang membuat klaim sitasi tanpa sumber nyata di REFERENSI/index.md).
+- NO DATA, NO RESULT (Dilarang membuat angka responden, akurasi, atau hasil kalkulasi palsu).
+- NO APPROVAL, NO STRUCTURAL CHANGE (Dilarang merombak judul, rumusan, atau metode terkunci).
+
+JANGAN MEMBUAT, MENGUBAH, ATAU MEMINDAHKAN FILE APA PUN PADA TAHAP INI.
+
+Setelah membaca, laporkan ringkas kepada saya:
+1. Konfirmasi pemahaman hierarki aturan (Level 1 s.d. Level 6) dan 4 pilar anti-halusinasi.
+2. Status CONTEXT_SKRIPSI.txt (bagian apa saja yang sudah terisi dan bagian yang masih [NEEDS USER INPUT]).
+3. Kesiapan 7 Mode Kerja (AUDIT, RESEARCH, WRITING, DIAGRAM, DOCUMENT, QA, FINALIZATION).
+4. Menunggu instruksi pekerjaan substantif dari saya.

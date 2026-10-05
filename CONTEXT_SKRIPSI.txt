@@ -1,0 +1,137 @@
+================================================================================
+MASTER CONTEXT SKRIPSI INFORMATIKA
+FILE KONTROL UTAMA IDENTITAS, METODOLOGI, DAN SUBSTANSI PENELITIAN
+================================================================================
+Document ID: CTX-SKRIPSI-001
+Status     : TEMPLATE WORKSPACE (MENUNGGU INPUT PENGGUNA)
+Aturan     : DILARANG MENGARANG/MENGISI DENGAN DATA ASUMSI.
+             Semua bagian yang bernilai [NEEDS USER INPUT] wajib diisi langsung
+             oleh mahasiswa/peneliti sebelum bagian skripsi terkait dikerjakan.
+================================================================================
+
+--------------------------------------------------------------------------------
+1. IDENTITAS PENELITI DAN INSTITUSI
+--------------------------------------------------------------------------------
+Nama Mahasiswa      : [NEEDS USER INPUT]
+NPM / NIM           : [NEEDS USER INPUT]
+Program Studi       : Informatika
+Fakultas            : Fakultas Ilmu Komputer
+Universitas         : Universitas Almuslim
+Tahun Akademik      : [NEEDS USER INPUT]
+Semester Pengajuan  : [NEEDS USER INPUT]
+Dosen Pembimbing I  : [NEEDS USER INPUT]
+Dosen Pembimbing II : [NEEDS USER INPUT]
+Dosen Penguji I     : [NEEDS USER INPUT]
+Dosen Penguji II    : [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+2. JUDUL PENELITIAN
+--------------------------------------------------------------------------------
+Judul Bahasa Indonesia : [NEEDS USER INPUT]
+Judul Bahasa Inggris   : [NEEDS USER INPUT]
+Status Judul           : [LOCKED / MENUNGGU PERSETUJUAN DOSEN]
+
+--------------------------------------------------------------------------------
+3. LATAR BELAKANG PENELITIAN
+--------------------------------------------------------------------------------
+Konteks Fenomena / Realitas : [NEEDS USER INPUT]
+Kesenjangan / Gap Masalah   : [NEEDS USER INPUT]
+Urgensi Penyelesaian Masalah: [NEEDS USER INPUT]
+Studi Terdahulu Terkait     : [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+4. IDENTIFIKASI & RUMUSAN MASALAH
+--------------------------------------------------------------------------------
+Identifikasi Masalah :
+1. [NEEDS USER INPUT]
+2. [NEEDS USER INPUT]
+
+Rumusan Masalah (Pertanyaan Penelitian) :
+1. [NEEDS USER INPUT]
+2. [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+5. TUJUAN DAN MANFAAT PENELITIAN
+--------------------------------------------------------------------------------
+Tujuan Penelitian :
+1. [NEEDS USER INPUT]
+2. [NEEDS USER INPUT]
+
+Manfaat Teoritis  : [NEEDS USER INPUT]
+Manfaat Praktis   : [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+6. BATASAN MASALAH (RUANG LINGKUP)
+--------------------------------------------------------------------------------
+1. [NEEDS USER INPUT]
+2. [NEEDS USER INPUT]
+3. [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+7. OBJEK DAN LOKASI PENELITIAN
+--------------------------------------------------------------------------------
+Nama Objek Penelitian : [NEEDS USER INPUT]
+Instansi / Organisasi : [NEEDS USER INPUT]
+Alamat Lokasi         : [NEEDS USER INPUT]
+Waktu / Periode Riset : [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+8. DATA PENELITIAN (PRINSIP: NO DATA, NO RESULT)
+--------------------------------------------------------------------------------
+Jenis Data            : [Primer / Sekunder]
+Metode Pengumpulan    : [Observasi / Wawancara / Kuesioner / Dokumen Riil]
+Populasi & Sampel     : [NEEDS USER INPUT / DATA REQUIRED]
+Jumlah Sampel / Data  : [DATA REQUIRED]
+Status Ketersediaan   : [BELUM ADA / DATA REQUIRED]
+Keterangan Data       : Agen dilarang membuat angka pengujian, akurasi, responden fiktif.
+
+--------------------------------------------------------------------------------
+9. METODE, ALGORITMA, DAN TEORI PENDUKUNG
+--------------------------------------------------------------------------------
+Metode Pengembangan   : [Waterfalls / Agile / RAD / Prototipe / dll - NEEDS USER INPUT]
+Metode / Algoritma Inti: [Weighted Product / AHP / KNN / SVM / CNN / dll - NEEDS USER INPUT]
+Parameter / Bobot     : [NEEDS USER INPUT]
+Formula / Rumus Utama : [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+10. SPESIFIKASI TEKNOLOGI & ARSITEKTUR SISTEM
+--------------------------------------------------------------------------------
+Platform Aplikasi     : [Web / Android / Desktop - NEEDS USER INPUT]
+Bahasa Pemrograman    : [PHP / Python / JavaScript / Dart / dll - NEEDS USER INPUT]
+Framework             : [Laravel / Django / React / Flutter / dll - NEEDS USER INPUT]
+Database Management   : [MySQL / PostgreSQL / SQLite / MongoDB - NEEDS USER INPUT]
+Web Server / Hosting  : [Apache / Nginx / Localhost - NEEDS USER INPUT]
+Peralatan Pendukung   : [UML / Figma / VS Code - NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+11. RANCANGAN FITUR & AKTOR PENGGUNA
+--------------------------------------------------------------------------------
+Aktor Pengguna Sistem :
+1. [NEEDS USER INPUT]
+2. [NEEDS USER INPUT]
+
+Daftar Fitur / Modul Utama :
+1. [NEEDS USER INPUT]
+2. [NEEDS USER INPUT]
+3. [NEEDS USER INPUT]
+
+--------------------------------------------------------------------------------
+12. TAHAP PENGUJIAN SISTEM (EVALUASI)
+--------------------------------------------------------------------------------
+Metode Pengujian      : [Blackbox / Whitebox / SUS / UAT / Akurasi / Matrix]
+Skenario Pengujian    : [NEEDS USER INPUT]
+Hasil Pengujian       : [RESULT REQUIRED - Menunggu pengujian nyata oleh mahasiswa]
+
+--------------------------------------------------------------------------------
+13. STATUS KEPUTUSAN AKADEMIK & CATATAN DOSEN
+--------------------------------------------------------------------------------
+Target Tebal Naskah   : Minimal 80 halaman (lembar), maksimal bebas (fleksibel)
+                        disesuaikan dengan kerumitan sistem dan data penelitian.
+Tanggal Seminar Proposal : [NEEDS USER INPUT]
+Tanggal Seminar Hasil    : [NEEDS USER INPUT]
+Tanggal Sidang Munaqasyah: [NEEDS USER INPUT]
+Catatan Revisi Terakhir  : [NEEDS USER INPUT]
+Keputusan Terkunci       : Mahasiswa mengunci judul & metode utama.
+                           Agen dilarang merombak metodologi tanpa izin eksplisit.
+================================================================================
+
