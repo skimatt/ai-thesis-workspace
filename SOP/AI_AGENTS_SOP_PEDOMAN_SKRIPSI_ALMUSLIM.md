@@ -612,9 +612,13 @@ diperkenankan.
 
 Untuk naskah skripsi yang mengikuti pedoman S1:
 
-**jangan gunakan bullet sebagai sistem penomoran akademik.**
+**DILARANG KERAS MENGGUNAKAN BULLET SEBAGAI SISTEM PENOMORAN AKADEMIK.**
 
-Gunakan numbering.
+Seluruh rincian daftar wajib menggunakan sistem penomoran alfanumerik bertingkat:
+- **Tingkat 1**: Angka Arab (`1.`, `2.`, `3.`) — Indentasi kiri 1.25 cm, hanging -0.75 cm.
+- **Tingkat 2**: Huruf alfabet kecil (`a.`, `b.`, `c.`) — Indentasi kiri 1.75 cm, hanging -0.50 cm.
+- **Tingkat 3**: Angka / Huruf kurung tutup (`1)`, `2)` atau `a)`, `b)`) — Indentasi kiri 2.25 cm, hanging -0.50 cm.
+- **Tingkat 4**: Kurung ganda (`(1)`, `(2)` atau `(a)`, `(b)`) — Indentasi kiri 2.50 cm, hanging -0.50 cm.
 
 ------------------------------------------------------------------------
 
@@ -814,12 +818,15 @@ Tabel 3.1 Data Pengguna
 +-------------------------+
 ```
 
-## 25.3 Format
+## 25.3 Format & Proporsi Lebar Kolom
 
--   simetris;
--   tanpa titik di akhir judul;
--   kata pertama kapital;
--   kata berikutnya huruf kecil sesuai kaidah;
+- **Model Tiga Garis Terbuka (Open Academic Table)**: Garis horizontal atas, bawah kepala tabel, dan penutup bawah tabel. DILARANG menggunakan garis vertikal.
+- **Proporsi Lebar Kolom**: Dilarang membagi kolom sama rata secara serampangan. Lebar kolom wajib disesuaikan dengan jenis isi (kolom nomor/kode 0.8–1.5 cm; teks/deskripsi utama 4.8–8.2 cm; skala likert 1.0 cm rata tengah). Lebar total tabel maksimal 14.0 cm (sesuai batas margin).
+- **Format Caption Bebas Duplikasi**: Label **Tabel X.X** dicetak tebal (*bold*), dilanjutkan spasi ganda dan judul tabel reguler tanpa duplikasi. Wajib menerapkan `keep_with_next = True` pada paragraf caption agar tidak terpisah di dasar halaman.
+- simetris;
+- tanpa titik di akhir judul;
+- kata pertama kapital;
+- kata berikutnya huruf kecil sesuai kaidah;
 -   jika lebih dari satu baris → 1 spasi.
 
 ## 25.4 Tabel panjang
@@ -934,6 +941,14 @@ Setiap tabel/gambar penting harus dapat ditelusuri dari teks.
 ------------------------------------------------------------------------
 
 # 28. PERSAMAAN MATEMATIKA
+
+## 28.1 Format Teknis (Office Math / OMML)
+1. Dilarang menulis persamaan matematika secara hardcode sebagai teks biasa.
+2. Seluruh rumus ditulis menggunakan sintaks LaTeX `$$...$$` pada dokumen Markdown dan dikompilasi menjadi objek persamaan native Word (*Office Math* / OMML) via Word COM (`OMaths.Add` + `BuildUp()`).
+3. Rumus diletakkan di tengah (*center-aligned*), mandiri pada paragraf tersendiri dengan font *Cambria Math*.
+4. Narasi penjelas variabel berikutnya (misal: *di mana X_i adalah...*) diletakkan pada paragraf baru terpisah dan tidak boleh melebur ke dalam objek persamaan.
+
+## 28.2 Penomoran Persamaan
 
 Nomor:
 

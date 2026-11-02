@@ -1,12 +1,12 @@
 ================================================================================
-POINTER FILE KONTEKS SKRIPSI
+POINTER FILE KONTEKS SKRIPSI INFORMATIKA
 ================================================================================
 File master konteks penelitian skripsi berada di:
 -> CONTEXT_SKRIPSI.txt
 
 Seluruh konfigurasi identitas, masalah, tujuan, metode, data, dan catatan dosen
 dikelola secara terpusat di dalam file:
-D:\Perkuliahan\PEDOMAN_PENULISAN_SKRIPSI_INFORMATIKA\CONTEXT_SKRIPSI.txt
+CONTEXT_SKRIPSI.txt (di root workspace ini).
 
 Silakan buka dan perbarui file tersebut. Dilarang membuat cabang file konteks
 baru agar tidak terjadi desinkronisasi.

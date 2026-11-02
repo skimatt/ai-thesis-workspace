@@ -84,8 +84,9 @@ Prioritas pencarian dan penggunaan sumber:
 
 ## 5. FORMAT SITASI DAN DAFTAR PUSTAKA
 
-1. Format sitasi dalam naskah mengikuti gaya IEEE atau APA sesuai ketentuan resmi Universitas Almuslim (lihat [SOP_FORMAT.md](AI_AGENTS_SOP_PEDOMAN_SKRIPSI_ALMUSLIM.md)).
+1. Format sitasi dalam naskah wajib mengikuti gaya **Harvard (Nama, Tahun)** sesuai ketentuan resmi FIKOM Universitas Almuslim (lihat [AI_AGENTS_SOP_PEDOMAN_SKRIPSI_ALMUSLIM.md](AI_AGENTS_SOP_PEDOMAN_SKRIPSI_ALMUSLIM.md)). Dilarang menggunakan sistem angka IEEE `[1]` atau mencampur gaya sitasi.
 2. Setiap kali sitasi dimasukkan ke draf BAB I–V, agen **WAJIB** memastikan:
    - Sumber terdaftar di `REFERENSI/index.md` dengan status minimal `VERIFIED`.
    - File PDF sumber ada di folder `REFERENSI/` jika menggunakan file offline.
    - Informasi di naskah merefleksikan isi asli artikel, bukan hasil tebakan.
+3. Daftar Pustaka disusun secara alfabetis berdasarkan nama belakang pengarang pertama tanpa nomor urut, menggunakan format gantung (*hanging indent*), spasi 1.0 dalam satu entri, dan spasi 1.5 antar-entri pustaka.

@@ -32,22 +32,58 @@ Seluruh proses komputasi dan penulisan terikat pada 4 prinsip mutlak:
 
 ```text
 ai-thesis-workspace/
-├── AGENTS.md                                   # Pusat kendali master governance & aturan 6-level
-├── CONTEXT_SKRIPSI.txt                         # Berkas master data penelitian, metode, & status riset (LOCKED)
+├── new_project.py                              # Generator otomatis 1-klik untuk project mahasiswa/klien baru
+├── AGENTS.md                                   # Pusat kendali master governance, aturan 6-level, & Python Policy
+├── CONTEXT_SKRIPSI.txt                         # Berkas master data penelitian, metode, & status riset (Clean Template)
 ├── konteks.txt                                 # Pointer resmi ke CONTEXT_SKRIPSI.txt
-├── CHEATSHEET_PROMPT.md                        # Repositori 25+ prompt siap pakai untuk 7 mode kerja & per-BAB
+├── CHEATSHEET_PROMPT.md                        # Repositori 30+ prompt siap pakai untuk 7 mode kerja & per-BAB
 ├── Chatpertama.txt                             # Prompt inisiasi sinkronisasi saat membuka sesi chat baru
+├── MCP_TOOLKIT_GUIDE.md                        # Panduan integrasi Athenaeum MCP, draw.io MCP, Word MCP, & Toolkit
+│
+├── config/                                     # Konfigurasi Deklaratif Proyek Skripsi (YAML Driven)
+│   ├── thesis.yaml                             # Metadata mahasiswa, judul, pembimbing, metodologi & pilar riset
+│   ├── document.yaml                           # Standar kertas (A4), margin (4-4-3-3), tipografi (TNR 12/14), spasi 1.5/2.0
+│   └── chapters.yaml                           # Toggle modular bab aktif (Mode 5-BAB vs 6-BAB otomatis)
+│
+├── workspace/                                  # Area Staging Mahasiswa & Artefak Ekspor
+│   ├── builds/                                 # Hasil kompilasi final skripsi_draft.docx & skripsi_draft.pdf
+│   ├── previews/                               # Pratinjau bab terisolasi & potongan naskah
+│   └── reports/                                # Laporan inspeksi otomatis (qa_audit_report.txt & .json)
+│
+├── drafts/                                     # Draf kerja naskah bertahap berbasis Markdown (Anti-Limit Token)
+│   ├── 00_BAGIAN_AWAL.md                       # Cover, Pengesahan, Pernyataan, Kata Pengantar, Abstrak ID & EN
+│   ├── 01_BAB_I.md                             # Pendahuluan, Latar Belakang, Rumusan, Batasan, Tujuan, Manfaat
+│   ├── 02_BAB_II.md                            # Tinjauan Pustaka, Matriks Penelitian Terdahulu, Landasan Teori
+│   ├── 03_BAB_III.md                           # Metodologi, Analisis Kebutuhan, Perancangan UML/ERD, Algoritma
+│   ├── 04_BAB_IV.md                            # Implementasi Antarmuka, Hasil Hitung Faktual, Pengujian Black Box/UAT
+│   ├── 05_BAB_V.md                             # Kesimpulan sinkron tujuan & Saran pengembangan
+│   ├── 06_BAB_VI.md                            # Bab Penutup Opsional (Jika mengaktifkan mode 6-BAB)
+│   ├── 07_DAFTAR_PUSTAKA.md                    # Daftar Pustaka Harvard alfabetis terverifikasi
+│   └── 08_DAFTAR_RIWAYAT_HIDUP.md              # Riwayat Hidup Penulis baku akademik
 │
 ├── AI_program/                                 # Direktori kerja internal agent
 │   ├── README.md                               # Regulasi isolasi berkas kerja sementara
-│   ├── scripts/                                # Skrip otomasi (pembuat dokumen, parsing, QC)
-│   │   └── create_template_docx.py             # Generator template Word baku resmi Almuslim
-│   └── working/                                # Draf kerja naskah
-│       └── template_skripsi_almuslim.docx      # Master template Word baku (A4, 4-4-3-3 cm, Section Breaks)
+│   ├── scripts/                                # Core Engine Skrip Otomasi Dokumen & Visual
+│   │   ├── create_template_docx.py             # Generator template Word baku resmi Almuslim
+│   │   ├── build_skripsi.py                    # Master Compiler: 2-Pass Precision, Native TOC, Formula OMML
+│   │   ├── render_academic_diagrams.py         # Generator diagram UML, Chen ERD & DFD monokrom 300 DPI
+│   │   ├── table_styler.py                     # Academic Open Table Builder (tiga garis monokrom)
+│   │   ├── render_diagram.py                   # Playwright Edge Renderer (Mermaid .mmd -> PNG 300 DPI)
+│   │   └── qa_audit.py                         # Pre-Flight Quality Gate Inspector v2.0 (10 aspek QC)
+│   ├── working/                                # Draf kerja naskah yang sedang diedit
+│   │   ├── template_skripsi_almuslim.docx      # Master template Word baku (A4, 4-4-3-3 cm, Section Breaks)
+│   │   ├── skripsi_compiled_preview.docx       # Berkas Word hasil kompilasi build_skripsi.py
+│   │   └── skripsi_compiled_preview.pdf        # Berkas PDF hasil rendering Microsoft Word COM
+│   ├── logs/                                   # Riwayat pemeriksaan & state tracking
+│   │   └── progress.json                       # State machine pelacakan status penulisan per-subbab
+│   └── temp/                                   # Berkas cache & intermediate conversion
 │
 ├── ASSETS/                                     # Material visual penunjang naskah
 │   ├── logo_umuslim.jpg                        # Logo resmi institusi untuk halaman judul
 │   ├── DIAGRAM/                                # Berkas sumber diagram (.mmd, .puml, .svg, .png)
+│   │   ├── SOP.md                              # Pedoman teknis diagram monokromatik
+│   │   ├── STANDARD_EXAMPLES/                  # Gambar acuan resmi UML Use Case, Simbol Chen ERD, DFD Level 0
+│   │   └── GENERATED_TESTS/                    # Hasil render generator diagram 300 DPI siap pakai
 │   └── SCREENSHOOT/                            # Bukti tangkapan layar sistem riil dari mahasiswa
 │
 ├── CONTOH_SKRIPSI/                             # Berkas pembanding format dan anatomi akademik
@@ -57,14 +93,23 @@ ai-thesis-workspace/
 │   └── README.md                               # Kriteria kelolosan dokumen siap cetak
 │
 ├── REFERENSI/                                  # Repositori literatur ilmiah primer & sekunder
-│   └── index.md                                # Master catalog pustaka terverifikasi (REF-001 dst.)
+│   ├── index.md                                # Master catalog pustaka terverifikasi (REF-001 dst.)
+│   ├── bibliography.bib                        # Format standar BibTeX untuk integrasi Mendeley/Zotero
+│   ├── reference_registry.yaml                 # Skema metadata pustaka terstruktur & DOI terverifikasi
+│   └── pdf/                                    # Taksonomi penyimpanan berkas PDF fisik referensi
+│       ├── belum_diverifikasi/                 # PDF baru yang menunggu audit verifikasi
+│       ├── jurnal/                             # Artikel jurnal ilmiah terindeks SINTA/Scopus
+│       ├── buku/                               # E-book & textbook rujukan
+│       ├── prosiding/                          # Makalah seminar nasional/internasional
+│       ├── laporan_resmi/                      # Whitepaper, regulasi pemerintah, dokumentasi standar
+│       └── skripsi_tesis/                      # Skripsi/tesis pembanding terdahulu
 │
 └── SOP/                                        # Standar Operasional Prosedur teknis
     ├── INDEX_SOP.md                            # Pemetaan direktori seluruh dokumen SOP
     ├── AI_AGENTS_SOP_PEDOMAN_SKRIPSI_ALMUSLIM.md # SOP Format, Layout, Margin, & Struktur BAB I–V
     ├── AI_AGENTS_WRITING_INTEGRITY_HUMAN_AUTHORED_SOP.md # SOP Integritas AI (Permendikbud 39/2021)
-    ├── SOP_DIAGRAM.md                          # SOP Diagram-as-Code monokrom v2.0
-    └── SOP_REFERENSI.md                        # SOP Tata kelola siklus hidup referensi
+    ├── SOP_DIAGRAM.md                          # SOP Diagram UML, Chen ERD, & DFD Level 0 v3.0
+    └── SOP_REFERENSI.md                        # SOP Tata kelola siklus hidup referensi Harvard & Mendeley
 ```
 
 ---

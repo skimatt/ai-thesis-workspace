@@ -1,24 +1,28 @@
 FIRST TASK: WORKSPACE SYNCHRONIZATION & READINESS CHECK
+FAKULTAS ILMU KOMPUTER — UNIVERSITAS ALMUSLIM
 
 Anda beroperasi di workspace penulisan skripsi akademik Informatika Universitas Almuslim.
 Tugas pertama Anda adalah memahami lingkungan kerja ini secara mendalam tanpa mengubah berkas apa pun.
 
 BACA DAN PAHAMI DENGAN URUTAN BERJENJANG:
-1. AGENTS.md (Master Governance v2.0 & Hierarki Aturan 6-Level)
-2. CONTEXT_SKRIPSI.txt / konteks.txt (Identitas, Metode, & Status Data Penelitian)
-3. SOP/INDEX_SOP.md (Pemetaan SOP Penulisan, Format, Diagram, Referensi, & Integritas)
-4. REFERENSI/index.md (Katalog Pustaka Terverifikasi)
+1. AGENTS.md (Master Governance, Hierarki Aturan 6-Level, & Python Tooling Policy)
+2. CONTEXT_SKRIPSI.txt / konteks.txt (Acuan Tunggal Identitas, Masalah, Metode, Data, & Parameter Riset)
+3. SOP/INDEX_SOP.md (Pemetaan SOP Penulisan, Format, Diagram, Referensi, & Integritas Akademik)
+4. REFERENSI/index.md (Katalog Pustaka Terverifikasi: Status DISCOVERED s.d. USED)
+5. drafts/ (Struktur Draf 6 BAB: 00_BAGIAN_AWAL.md s.d. 08_DAFTAR_RIWAYAT_HIDUP.md)
 
 PRINSIP UTAMA (STRICT ENFORCEMENT):
-- DO NOT INVENT (Dilarang mengarang informasi, regulasi, atau teori fiktif).
+- DO NOT INVENT (Dilarang mengarang informasi, regulasi, fakta empiris, atau teori).
 - NO SOURCE, NO CLAIM (Dilarang membuat klaim sitasi tanpa sumber nyata di REFERENSI/index.md).
-- NO DATA, NO RESULT (Dilarang membuat angka responden, akurasi, atau hasil kalkulasi palsu).
-- NO APPROVAL, NO STRUCTURAL CHANGE (Dilarang merombak judul, rumusan, atau metode terkunci).
+- NO DATA, NO RESULT (Dilarang membuat angka responden, akurasi, atau hasil hitung fiktif).
+- NO APPROVAL, NO STRUCTURAL CHANGE (Dilarang merombak judul, rumusan, atau metode yang telah LOCKED di CONTEXT_SKRIPSI.txt).
 
 JANGAN MEMBUAT, MENGUBAH, ATAU MEMINDAHKAN FILE APA PUN PADA TAHAP INI.
 
-Setelah membaca, laporkan ringkas kepada saya:
+Setelah membaca seluruh berkas di atas, laporkan ringkas kepada saya:
 1. Konfirmasi pemahaman hierarki aturan (Level 1 s.d. Level 6) dan 4 pilar anti-halusinasi.
-2. Status CONTEXT_SKRIPSI.txt (bagian apa saja yang sudah terisi dan bagian yang masih [NEEDS USER INPUT]).
-3. Kesiapan 7 Mode Kerja (AUDIT, RESEARCH, WRITING, DIAGRAM, DOCUMENT, QA, FINALIZATION).
-4. Menunggu instruksi pekerjaan substantif dari saya.
+2. Status CONTEXT_SKRIPSI.txt (parameter apa yang sudah terisi dan bagian apa saja yang masih bertanda [NEEDS USER INPUT]).
+3. Kesiapan Struktur 6 BAB resmi Almuslim di folder drafts/.
+4. Kesiapan 7 Mode Kerja (AUDIT, RESEARCH, WRITING, DIAGRAM, DOCUMENT, QA, FINALIZATION).
+5. Kesiapan Local Toolkit di AI_program/scripts/ (build_skripsi.py, table_styler.py, render_diagram.py, qa_audit.py).
+6. Menunggu instruksi pekerjaan substantif dari saya.

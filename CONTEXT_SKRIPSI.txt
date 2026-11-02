@@ -1,137 +1,139 @@
-================================================================================
-MASTER CONTEXT SKRIPSI INFORMATIKA
-FILE KONTROL UTAMA IDENTITAS, METODOLOGI, DAN SUBSTANSI PENELITIAN
-================================================================================
-Document ID: CTX-SKRIPSI-001
-Status     : TEMPLATE WORKSPACE (MENUNGGU INPUT PENGGUNA)
-Aturan     : DILARANG MENGARANG/MENGISI DENGAN DATA ASUMSI.
-             Semua bagian yang bernilai [NEEDS USER INPUT] wajib diisi langsung
-             oleh mahasiswa/peneliti sebelum bagian skripsi terkait dikerjakan.
-================================================================================
+# CONTEXT_SKRIPSI.txt
+# MASTER KONTEKS DAN PARAMETER PENELITIAN SKRIPSI INFORMATIKA
+# FAKULTAS ILMU KOMPUTER - UNIVERSITAS ALMUSLIM
+# Status: TEMPLATE SIAP ISI (LOCKED KETIKA TELAH DIISI OLEH MAHASISWA)
 
---------------------------------------------------------------------------------
-1. IDENTITAS PENELITI DAN INSTITUSI
---------------------------------------------------------------------------------
+================================================================================
+1. IDENTITAS PENELITI DAN PEMBIMBING
+================================================================================
 Nama Mahasiswa      : [NEEDS USER INPUT]
-NPM / NIM           : [NEEDS USER INPUT]
-Program Studi       : Informatika
-Fakultas            : Fakultas Ilmu Komputer
-Universitas         : Universitas Almuslim
-Tahun Akademik      : [NEEDS USER INPUT]
-Semester Pengajuan  : [NEEDS USER INPUT]
-Dosen Pembimbing I  : [NEEDS USER INPUT]
-Dosen Pembimbing II : [NEEDS USER INPUT]
-Dosen Penguji I     : [NEEDS USER INPUT]
-Dosen Penguji II    : [NEEDS USER INPUT]
+NIM / NPM           : [NEEDS USER INPUT]
+Program Studi       : Informatika (S1)
+Fakultas            : Fakultas Ilmu Komputer (FIKOM)
+Perguruan Tinggi    : Universitas Almuslim
+Tahun Akademik      : [NEEDS USER INPUT] (contoh: 2025/2026)
 
---------------------------------------------------------------------------------
-2. JUDUL PENELITIAN
---------------------------------------------------------------------------------
-Judul Bahasa Indonesia : [NEEDS USER INPUT]
-Judul Bahasa Inggris   : [NEEDS USER INPUT]
-Status Judul           : [LOCKED / MENUNGGU PERSETUJUAN DOSEN]
+Dosen Pembimbing I  : [NEEDS USER INPUT] (Nama lengkap beserta gelar)
+NIDN Pembimbing I   : [NEEDS USER INPUT]
+Dosen Pembimbing II : [NEEDS USER INPUT] (Nama lengkap beserta gelar)
+NIDN Pembimbing II  : [NEEDS USER INPUT]
 
---------------------------------------------------------------------------------
-3. LATAR BELAKANG PENELITIAN
---------------------------------------------------------------------------------
-Konteks Fenomena / Realitas : [NEEDS USER INPUT]
-Kesenjangan / Gap Masalah   : [NEEDS USER INPUT]
-Urgensi Penyelesaian Masalah: [NEEDS USER INPUT]
-Studi Terdahulu Terkait     : [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-4. IDENTIFIKASI & RUMUSAN MASALAH
---------------------------------------------------------------------------------
-Identifikasi Masalah :
-1. [NEEDS USER INPUT]
-2. [NEEDS USER INPUT]
-
-Rumusan Masalah (Pertanyaan Penelitian) :
-1. [NEEDS USER INPUT]
-2. [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-5. TUJUAN DAN MANFAAT PENELITIAN
---------------------------------------------------------------------------------
-Tujuan Penelitian :
-1. [NEEDS USER INPUT]
-2. [NEEDS USER INPUT]
-
-Manfaat Teoritis  : [NEEDS USER INPUT]
-Manfaat Praktis   : [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-6. BATASAN MASALAH (RUANG LINGKUP)
---------------------------------------------------------------------------------
-1. [NEEDS USER INPUT]
-2. [NEEDS USER INPUT]
-3. [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-7. OBJEK DAN LOKASI PENELITIAN
---------------------------------------------------------------------------------
-Nama Objek Penelitian : [NEEDS USER INPUT]
-Instansi / Organisasi : [NEEDS USER INPUT]
-Alamat Lokasi         : [NEEDS USER INPUT]
-Waktu / Periode Riset : [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-8. DATA PENELITIAN (PRINSIP: NO DATA, NO RESULT)
---------------------------------------------------------------------------------
-Jenis Data            : [Primer / Sekunder]
-Metode Pengumpulan    : [Observasi / Wawancara / Kuesioner / Dokumen Riil]
-Populasi & Sampel     : [NEEDS USER INPUT / DATA REQUIRED]
-Jumlah Sampel / Data  : [DATA REQUIRED]
-Status Ketersediaan   : [BELUM ADA / DATA REQUIRED]
-Keterangan Data       : Agen dilarang membuat angka pengujian, akurasi, responden fiktif.
-
---------------------------------------------------------------------------------
-9. METODE, ALGORITMA, DAN TEORI PENDUKUNG
---------------------------------------------------------------------------------
-Metode Pengembangan   : [Waterfalls / Agile / RAD / Prototipe / dll - NEEDS USER INPUT]
-Metode / Algoritma Inti: [Weighted Product / AHP / KNN / SVM / CNN / dll - NEEDS USER INPUT]
-Parameter / Bobot     : [NEEDS USER INPUT]
-Formula / Rumus Utama : [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-10. SPESIFIKASI TEKNOLOGI & ARSITEKTUR SISTEM
---------------------------------------------------------------------------------
-Platform Aplikasi     : [Web / Android / Desktop - NEEDS USER INPUT]
-Bahasa Pemrograman    : [PHP / Python / JavaScript / Dart / dll - NEEDS USER INPUT]
-Framework             : [Laravel / Django / React / Flutter / dll - NEEDS USER INPUT]
-Database Management   : [MySQL / PostgreSQL / SQLite / MongoDB - NEEDS USER INPUT]
-Web Server / Hosting  : [Apache / Nginx / Localhost - NEEDS USER INPUT]
-Peralatan Pendukung   : [UML / Figma / VS Code - NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-11. RANCANGAN FITUR & AKTOR PENGGUNA
---------------------------------------------------------------------------------
-Aktor Pengguna Sistem :
-1. [NEEDS USER INPUT]
-2. [NEEDS USER INPUT]
-
-Daftar Fitur / Modul Utama :
-1. [NEEDS USER INPUT]
-2. [NEEDS USER INPUT]
-3. [NEEDS USER INPUT]
-
---------------------------------------------------------------------------------
-12. TAHAP PENGUJIAN SISTEM (EVALUASI)
---------------------------------------------------------------------------------
-Metode Pengujian      : [Blackbox / Whitebox / SUS / UAT / Akurasi / Matrix]
-Skenario Pengujian    : [NEEDS USER INPUT]
-Hasil Pengujian       : [RESULT REQUIRED - Menunggu pengujian nyata oleh mahasiswa]
-
---------------------------------------------------------------------------------
-13. STATUS KEPUTUSAN AKADEMIK & CATATAN DOSEN
---------------------------------------------------------------------------------
-Target Tebal Naskah   : Minimal 80 halaman (lembar), maksimal bebas (fleksibel)
-                        disesuaikan dengan kerumitan sistem dan data penelitian.
-Tanggal Seminar Proposal : [NEEDS USER INPUT]
-Tanggal Seminar Hasil    : [NEEDS USER INPUT]
-Tanggal Sidang Munaqasyah: [NEEDS USER INPUT]
-Catatan Revisi Terakhir  : [NEEDS USER INPUT]
-Keputusan Terkunci       : Mahasiswa mengunci judul & metode utama.
-                           Agen dilarang merombak metodologi tanpa izin eksplisit.
 ================================================================================
+2. IDENTITAS DAN PARAMETER UTAMA PENELITIAN
+================================================================================
+Judul Skripsi       : [NEEDS USER INPUT]
+(Tuliskan judul lengkap dengan huruf kapital, ringkas, jelas, dan memuat metode serta objek penelitian)
 
+Bidang Keahlian / Peminatan:
+[NEEDS USER INPUT] (contoh: Sistem Pendukung Keputusan / Rekayasa Perangkat Lunak / Kecerdasan Buatan / Jaringan Komputer / Pengolahan Citra Digital)
+
+Objek / Lokasi Penelitian:
+- Nama Instansi/Perusahaan : [NEEDS USER INPUT]
+- Alamat Lengkap           : [NEEDS USER INPUT]
+- Kontak / Pihak Penghubung : [NEEDS USER INPUT]
+
+Metode Komputasi / Algoritma Inti:
+[NEEDS USER INPUT] (contoh: Weighted Product (WP) / TOPSIS / AHP / SAW / K-Nearest Neighbor (KNN) / Convolutional Neural Network (CNN) / Waterfall)
+
+Spesifikasi Teknologi Sistem:
+- Bahasa Pemrograman       : [NEEDS USER INPUT] (contoh: PHP 8.2 / Python 3.12 / JavaScript)
+- Framework Backend        : [NEEDS USER INPUT] (contoh: Laravel 11 / Django / FastApi / Express)
+- Framework Frontend       : [NEEDS USER INPUT] (contoh: Blade / React / Vue / Tailwind CSS)
+- Database Management (DBMS): [NEEDS USER INPUT] (contoh: MySQL / PostgreSQL)
+- Web Server & Tools       : [NEEDS USER INPUT] (contoh: Apache / Nginx, VS Code, Git)
+
+================================================================================
+3. MASALAH DAN FENOMENA LAPANGAN (LATAR BELAKANG)
+================================================================================
+3.1 Kondisi Ideal:
+[NEEDS USER INPUT] (Jelaskan kondisi ideal dari proses bisnis atau sistem yang diharapkan berjalan di lokasi penelitian)
+
+3.2 Masalah Riil di Lapangan:
+[NEEDS USER INPUT] (Jelaskan kendala, hambatan, atau inefisiensi nyata yang saat ini terjadi pada instansi/objek riset)
+
+3.3 Bukti Masalah / Data Awal:
+[NEEDS USER INPUT] (Sebutkan bukti fisik atau data pendukung masalah, misal: keterlambatan laporan, kesalahan pembagian bantuan, tingginya waktu seleksi)
+
+3.4 Dampak Jika Masalah Dibiarkan:
+[NEEDS USER INPUT] (Jelaskan konsekuensi negatif terhadap instansi jika masalah tidak diselesaikan dengan sistem terkomputasi)
+
+3.5 Solusi yang Diajukan:
+[NEEDS USER INPUT] (Jelaskan mengapa metode/algoritma yang dipilih adalah solusi paling tepat dan ilmiah untuk menyelesaikan masalah tersebut)
+
+================================================================================
+4. RUMUSAN MASALAH, BATASAN, DAN TUJUAN PENELITIAN
+================================================================================
+4.1 Rumusan Masalah:
+1. [NEEDS USER INPUT] (Pertanyaan penelitian 1, contoh: Bagaimana menganalisis dan merancang sistem...)
+2. [NEEDS USER INPUT] (Pertanyaan penelitian 2, contoh: Bagaimana mengimplementasikan metode [Metode] dalam menentukan...)
+3. [NEEDS USER INPUT] (Pertanyaan penelitian 3, contoh: Bagaimana hasil pengujian kinerja dan akurasi sistem...)
+
+4.2 Batasan Masalah (Ruang Lingkup):
+1. [NEEDS USER INPUT] (Batasan objek/wilayah, contoh: Penelitian difokuskan hanya pada data tahun 2024–2025 di Kecamatan X)
+2. [NEEDS USER INPUT] (Batasan metode, contoh: Kriteria yang digunakan dalam seleksi dibatasi sebanyak 5 kriteria utama)
+3. [NEEDS USER INPUT] (Batasan platform/fitur, contoh: Sistem dibangun berbasis web responsif tanpa integrasi payment gateway)
+
+4.3 Tujuan Penelitian:
+1. [NEEDS USER INPUT] (Tujuan 1: Sinkron 1:1 dengan Rumusan Masalah 1)
+2. [NEEDS USER INPUT] (Tujuan 2: Sinkron 1:1 dengan Rumusan Masalah 2)
+3. [NEEDS USER INPUT] (Tujuan 3: Sinkron 1:1 dengan Rumusan Masalah 3)
+
+4.4 Manfaat Penelitian:
+- Manfaat Praktis (Bagi Instansi/Objek Riset): [NEEDS USER INPUT]
+- Manfaat Akademis (Bagi Prodi Informatika / Peneliti Lain): [NEEDS USER INPUT]
+- Manfaat Pribadi (Bagi Penulis): [NEEDS USER INPUT]
+
+================================================================================
+5. KRITERIA, BOBOT, DAN RANCANGAN METODE KOMPUTASI
+================================================================================
+5.1 Daftar Kriteria Keputusan / Atribut Data:
+| Kode | Nama Kriteria | Tipe (Benefit / Cost) | Bobot Awal | Sumber Nilai Bobot |
+|:---:|:---|:---:|:---:|:---|
+| C1 | [NEEDS USER INPUT] | Benefit / Cost | [NEEDS USER INPUT] | Wawancara / SK Direktur / Dokumen |
+| C2 | [NEEDS USER INPUT] | Benefit / Cost | [NEEDS USER INPUT] | Wawancara / SK Direktur / Dokumen |
+| C3 | [NEEDS USER INPUT] | Benefit / Cost | [NEEDS USER INPUT] | Wawancara / SK Direktur / Dokumen |
+| C4 | [NEEDS USER INPUT] | Benefit / Cost | [NEEDS USER INPUT] | Wawancara / SK Direktur / Dokumen |
+| C5 | [NEEDS USER INPUT] | Benefit / Cost | [NEEDS USER INPUT] | Wawancara / SK Direktur / Dokumen |
+
+5.2 Formula Matematis Algoritma:
+[NEEDS USER INPUT] (Tuliskan nama rumus dan tahapan perhitungan: normalisasi bobot, perhitungan vektor S/V, matriks preferensi, dll.)
+
+================================================================================
+6. RANCANGAN PENGUMPULAN DATA EMPIRIS
+================================================================================
+6.1 Observasi Langsung:
+- Lokasi Pengamatan : [NEEDS USER INPUT]
+- Aspek yang Diamati : [NEEDS USER INPUT]
+
+6.2 Wawancara Faktual:
+- Narasumber Utama  : [NEEDS USER INPUT] (Nama & Jabatan narasumber nyata di lokasi)
+- Topik Pertanyaan  : [NEEDS USER INPUT]
+
+6.3 Dokumentasi Data Sekunder:
+- Nama Dokumen / Arsip : [NEEDS USER INPUT] (contoh: Data penerima program 2024)
+- Jumlah Rekor Data    : [NEEDS USER INPUT] (contoh: 50 data alternatif riil)
+
+================================================================================
+7. RANCANGAN PENGUJIAN SISTEM (VALIDASI HASIL)
+================================================================================
+7.1 Metode Pengujian Fungsional:
+[NEEDS USER INPUT] (contoh: Black Box Testing untuk menguji fungsionalitas seluruh form input, proses hitung algoritma, dan output laporan)
+
+7.2 Metode Pengujian Akurasi / Perbandingan Keputusan:
+[NEEDS USER INPUT] (contoh: Membandingkan 30 rekomendasi sistem dengan keputusan manual instansi untuk mengukur persentase kecocokan)
+
+7.3 Pengujian Kepuasan Pengguna (User Acceptance Testing - UAT):
+[NEEDS USER INPUT] (contoh: Kuesioner skala Likert kepada 10 responden admin/staf instansi)
+
+================================================================================
+8. CATATAN & ARAHAN KHUSUS DOSEN PEMBIMBING
+================================================================================
+Catatan Pembimbing I:
+- [NEEDS USER INPUT] (Tuliskan revisi atau petunjuk khusus dari Pembimbing I)
+
+Catatan Pembimbing II:
+- [NEEDS USER INPUT] (Tuliskan revisi atau petunjuk khusus dari Pembimbing II)
+
+================================================================================
+STATUS PENGUNCIAN: DRAFT TEMPLATE - MENUNGGU INPUT LENGKAP MAHASISWA
+================================================================================

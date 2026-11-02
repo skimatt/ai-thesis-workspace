@@ -1,0 +1,56 @@
+# CHAPTER MODULAR CONFIGURATION
+# Mengontrol bab aktif dan pemetaan berkas draf markdown
+# Default: Standar 6 BAB FIKOM Universitas Almuslim.
+# Jika kampus Anda menggunakan Standar Nasional 5 BAB (APTIKOM):
+# Ubah Bab 4 menjadi "Hasil dan Pembahasan", Bab 5 menjadi "Penutup", dan set enabled Bab 6: false.
+
+structure_type: "6_BAB_FIKOM"  # Opsi: "6_BAB_FIKOM" atau "5_BAB_APTIKOM"
+
+chapters:
+  - id: 1
+    roman: "I"
+    title: "PENDAHULUAN"
+    file: "01_BAB_I.md"
+    enabled: true
+
+  - id: 2
+    roman: "II"
+    title: "LANDASAN TEORI"
+    file: "02_BAB_II.md"
+    enabled: true
+
+  - id: 3
+    roman: "III"
+    title: "ANALISA DAN PERANCANGAN SISTEM"
+    file: "03_BAB_III.md"
+    enabled: true
+
+  - id: 4
+    roman: "IV"
+    title: "IMPLEMENTASI SISTEM"
+    file: "04_BAB_IV.md"
+    enabled: true
+
+  - id: 5
+    roman: "V"
+    title: "PENGUJIAN DAN PEMBAHASAN"
+    file: "05_BAB_V.md"
+    enabled: true
+
+  - id: 6
+    roman: "VI"
+    title: "PENUTUP"
+    file: "06_BAB_VI.md"
+    enabled: true
+
+# Berkas Bagian Akhir (Tanpa Nomor Bab)
+back_matter:
+  - id: "pustaka"
+    title: "DAFTAR PUSTAKA"
+    file: "07_DAFTAR_PUSTAKA.md"
+    enabled: true
+
+  - id: "riwayat_hidup"
+    title: "DAFTAR RIWAYAT HIDUP"
+    file: "08_DAFTAR_RIWAYAT_HIDUP.md"
+    enabled: true

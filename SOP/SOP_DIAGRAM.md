@@ -1,45 +1,83 @@
 # SOP PEMBUATAN DIAGRAM TEKNIS SKRIPSI INFORMATIKA
-## STANDARISASI DIAGRAM-AS-CODE (MERMAID, PLANTUML, DRAW.IO) & VISUAL ZERO-DEFECT
+## STANDARISASI DIAGRAM-AS-CODE (MERMAID, PLANTUML, DRAW.IO, PYTHON GENERATOR) & VISUAL ZERO-DEFECT
 
-**Document ID:** SOP-DIAGRAM-002  
-**Version:** 2.0 (Enhanced Technical Specification)  
+**Document ID:** SOP-DIAGRAM-003  
+**Version:** 3.0 (Master Visual Specification & Multi-Tooling Engine)  
 **Status:** MANDATORY & STRICT ENFORCEMENT  
-**Scope:** Seluruh AI Agent dan pembuatan diagram sistem, ERD, UML, flowchart, dan arsitektur pada naskah skripsi.  
+**Scope:** Seluruh AI Agent dan pembuatan diagram sistem, ERD, UML, DFD, flowchart, dan arsitektur pada naskah skripsi Informatika.  
 
 ---
 
-## 1. TUJUAN DAN PRINSIP UTAMA
-File ini menetapkan standar teknis pembuatan diagram skripsi informatika agar **bebas cacat sintaks (*zero-defect*)**, **terbaca sempurna saat dicetak monokrom**, dan **merefleksikan sistem nyata tanpa komponen fiktif**.
+## 1. TUJUAN DAN 5 PRINSIP UTAMA
+
+SOP ini menetapkan standar teknis dan visual pembuatan diagram skripsi informatika agar **bebas cacat sintaks (*zero-defect*)**, **terbaca sempurna saat dicetak monokrom**, **memiliki keseragaman bentuk sesuai kaidah akademik resmi**, dan **merefleksikan sistem nyata tanpa komponen fiktif**.
 
 ```text
-+--------------------------------------------------------------------------+
-| 1. ACCURATE   : Wajib sesuai arsitektur code dan database faktual.       |
-| 2. MONOCHROME : Garis hitam solid, teks hitam, latar dan isi putih murni.|
-| 3. CODE-BASED : Dibuat menggunakan sintaks teknis resmi (Mermaid/PlantUML|
-|                 /Draw.io XML) yang dapat di-compile tanpa error.         |
-| 4. NO SHADOW  : Bebas warna gradasi, bayangan (shadow), glow, dan 3D.    |
-| 5. ACADEMIC   : Tipografi Times New Roman, ukuran proporsional (10-12 pt)|
-|                 dan lebar maksimal 14 cm (pas di margin Word 4-4-3-3).   |
-+--------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+| 1. ACCURATE    : Wajib sesuai arsitektur kode, basis data, dan modul faktual sistem.   |
+| 2. MONOCHROME  : Garis hitam solid (#000000), teks hitam, latar dan bidang putih murni. |
+| 3. CODE-BASED  : Diprogram dengan sintaks teknis resmi (Mermaid, PlantUML, Draw.io XML, |
+|                  atau Python SVG Generator) yang dapat di-render tanpa distorsi visual. |
+| 4. NO SHADOW   : Dilarang menggunakan warna dekoratif/gradasi, bayangan (shadow), 3D.   |
+| 5. ACADEMIC    : Tipografi Times New Roman, ukuran proporsional (10-12 pt), caption di  |
+|                  bawah tengah, lebar maksimal 13.5 cm (pas di margin Word 4-4-3-3 cm).  |
++-----------------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 2. STANDAR BAHASA TEKNIS PEMROGRAMAN DIAGRAM (*DIAGRAM-AS-CODE*)
+## 2. GALERI ACUAN STANDAR VISUAL RESMI (OFFICIAL BENCHMARK GALLERY)
 
-AI Agent **WAJIB** menggunakan salah satu dari 3 bahasa teknis berikut saat memprogram diagram:
+Setiap diagram yang dirancang oleh AI Agent **WAJIB MENYESUAIKAN DIRI** dengan 4 contoh standar visual resmi yang tersimpan di direktori:  
+👉 `PEDOMAN_SKIPSI1/ASSETS/DIAGRAM/STANDARD_EXAMPLES/`
 
-1. **Mermaid.js (`mermaid`)**: Bahasa standar utama untuk preview langsung di Markdown, chat, dan diekspor ke SVG/PNG.
-2. **PlantUML (`puml`)**: Standar formal rekayasa perangkat lunak internasional untuk pemodelan UML kompleks.
-3. **Draw.io XML / Draw.io CSV**: Format visual interaktif jika pengguna memerlukan pengeditan manual via aplikasi desktop Draw.io.
+```text
+ASSETS/DIAGRAM/STANDARD_EXAMPLES/
+├── 01_contoh_use_case_diagram.png       <- Standar Visual UML: Use Case Diagram & System Boundary
+├── 02_simbol_erd_chen_notation.png      <- Standar Simbol ERD Notasi Peter Chen Akademik
+├── 03_contoh_erd_akademik.png           <- Standar Contoh ERD Akademik Lengkap & Kardinalitas
+└── 04_contoh_dfd_level_0_konteks.png    <- Standar Visual DFD: Diagram Konteks / Level 0
+```
+
+### 2.1 Ringkasan Bedah Visual Contoh Resmi:
+1. **Acuan 1: Use Case Diagram (`01_contoh_use_case_diagram.png`)**:
+   - Memiliki kotak batas sistem (*System Boundary / Subsystem*) persegi panjang dengan judul di pojok kiri atas bertuliskan `«subsystem» [Nama Sistem/Modul]`.
+   - Aktor disajikan dalam bentuk simbol *stick-figure* manusia monokromatik di luar kotak sistem (aktor primer di sisi kiri, aktor sekunder / external system di sisi kanan).
+   - Use case berbentuk elips (*horizontal oval*) yang tersusun vertikal rapi di dalam kotak boundary.
+   - Garis asosiasi berupa garis lurus tegas tanpa panah (*solid line*) yang menghubungkan aktor dengan elips use case.
+2. **Acuan 2: Simbol ERD Notasi Peter Chen (`02_simbol_erd_chen_notation.png`)**:
+   - Standar klasik akademik fakultas informatika di Indonesia:
+     - **Entitas Kuat (Entity)**: Persegi panjang garis tunggal.
+     - **Entitas Lemah (Weak Entity)**: Persegi panjang garis ganda (*double rectangle*).
+     - **Relasi (Relationship)**: Belah ketupat garis tunggal (*diamond*).
+     - **Relasi Identifikasi (Identifying Relationship)**: Belah ketupat garis ganda (*double diamond*).
+     - **Atribut Biasa**: Elips garis tunggal (*single ellipse*).
+     - **Atribut Kunci (Key Attribute / Primary Key)**: Elips dengan teks digarisbawahi (*underline*) atau diawali tanda bintang (`*`).
+     - **Atribut Multivalue**: Elips garis ganda (*double ellipse*).
+     - **Atribut Komposit**: Elips induk bercabang ke sub-elips atribut turunan.
+     - **Atribut Derivatif**: Elips garis putus-putus (*dashed ellipse*).
+     - **Total Participation**: Garis ganda (*double line*) yang menghubungkan entitas ke relasi.
+     - **Kardinalitas**: Notasi eksplisit angka `1` dan `N` (atau `M`) pada setiap ujung relasi.
+3. **Acuan 3: Contoh ERD Akademik Lengkap (`03_contoh_erd_akademik.png`)**:
+   - Menggambarkan relasi antar-entitas (`mahasiswa`, `dosen`, `mata_kuliah`, `ruang`) dengan atribut melingkari entitas, relasi belah ketupat di tengah, dan penunjuk kardinalitas berarah/terlabel `1:N`, `M:N`, `1:1`.
+4. **Acuan 4: DFD Level 0 / Diagram Konteks (`04_contoh_dfd_level_0_konteks.png`)**:
+   - Lingkaran proses tunggal di tengah bertuliskan nama sistem secara lengkap.
+   - Entitas luar (*external entity*) berbentuk persegi panjang dengan teks huruf kapital tebal (contoh: `MANAJER`, `PEMBELI`, `MARKETING`).
+   - Garis alir data (*data flow*) berupa panah terarah bolak-balik dengan teks label dokumen/data yang spesifik dan jelas (bukan panah kosong).
 
 ---
 
-## 3. KONFIGURASI TEMA MONOKROM BAKU (*ZERO-DEFECT PALETTE*)
+## 3. PANDUAN PENGGUNAAN PERKAKAS & PLUGIN (*TOOLING ECOSYSTEM*)
 
-### 3.1 Direktif Wajib Mermaid.js
-Setiap kode Mermaid **WAJIB** diawali dengan direktif tema monokrom berikut:
+AI Agent dapat memanfaatkan ekosistem perkakas berikut untuk memprogram diagram agar desainnya sesuai dengan sistem mahasiswa:
 
+### 3.1 Draw.io Plugin / Draw.io XML (`.drawio`)
+- **Keunggulan**: Menghasilkan diagram monokrom interaktif yang presisi dan dapat diedit kembali oleh mahasiswa atau dosen pembimbing menggunakan aplikasi Draw.io Desktop atau ekstensi VS Code / Antigravity Draw.io Plugin.
+- **Standar Format**: Simpan berkas sumber di `ASSETS/DIAGRAM/[nama_diagram].drawio` dan ekspor salinan visualnya menjadi `.png` (300 DPI) atau `.svg`.
+
+### 3.2 Mermaid.js (`.mmd`)
+- **Keunggulan**: *Diagram-as-Code* yang dapat langsung di-render di dalam pratinjau Markdown.
+- **Konfigurasi Wajib**: Seluruh blok kode Mermaid **WAJIB** diawali direktif tema monokrom baku:
 ```text
 %%{init: {
   'theme': 'base',
@@ -56,9 +94,9 @@ Setiap kode Mermaid **WAJIB** diawali dengan direktif tema monokrom berikut:
 }}%%
 ```
 
-### 3.2 Direktif Wajib PlantUML
-Setiap diagram PlantUML **WAJIB** menyertakan parameter `skinparam` monokrom tanpa bayangan:
-
+### 3.3 PlantUML (`.puml`)
+- **Keunggulan**: Sangat stabil untuk Use Case dengan boundary `«subsystem»`, Activity Diagram dengan *swimlanes*, dan Sequence Diagram.
+- **Konfigurasi Wajib**:
 ```plantuml
 @startuml
 skinparam monochrome true
@@ -68,38 +106,243 @@ skinparam defaultFontSize 12
 skinparam backgroundColor #FFFFFF
 skinparam ArrowColor #000000
 skinparam BorderColor #000000
-skinparam BoxPadding 10
-skinparam ParticipantPadding 15
-skinparam RoundCorner 0
 @enduml
 ```
+
+### 3.4 Python Academic Diagram Generator (`AI_program/scripts/render_academic_diagrams.py`)
+- Skrip lokal berbasis Python (`matplotlib` / `pillow` / `svgwrite`) yang disediakan untuk menggambar simbol Chen ERD dan DFD secara deterministik dan mengekspornya langsung ke format PNG 300 DPI.
 
 ---
 
 ## 4. TEMPLATE SINTAKS BAKU PER JENIS DIAGRAM SKRIPSI
 
-### 4.1 Flowchart / Diagram Alir Algoritma (Standar ANSI/ISO)
-Flowchart digunakan untuk menjelaskan alur sistem atau tahapan kalkulasi metode/algoritma di BAB III dan BAB IV.
+### 4.1 Use Case Diagram (Persis Standar Gambar 1)
+Menggambarkan interaksi fungsional antara aktor dengan sistem di BAB III.
 
-* **Simbol Standar:**
-  - Oval / Rounded: Terminator (Mulai / Selesai)
-  - Persegi Panjang: Proses Komputasi
-  - Belah Ketupat: Keputusan / Percabangan (*Decision*)
-  - Jajar Genjang: Input / Output Data
+* **Aturan Visual Wajib:**
+  1. Kotak persegi panjang pembatas sistem (*System Boundary*) diberi judul `«subsystem» [Nama Modul / Sistem]` di sudut kiri atas.
+  2. Aktor primer berada di sisi kiri kotak; aktor sekunder atau sistem eksternal berada di sisi kanan kotak.
+  3. Use case berbentuk elips horizontal, teks kata kerja tindakan (contoh: *Input Nilai Kriteria*, *Proses Algoritma*).
+  4. Garis asosiasi berupa garis solid lurus tegas tanpa panah. Relasi `<<include>>` atau `<<extend>>` menggunakan garis putus-putus dengan panah terbuka.
 
-* **Kode Mermaid Baku:**
+* **Kode PlantUML Baku (Persis Standar Gambar 1):**
+```plantuml
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName "Times New Roman"
+skinparam defaultFontSize 12
+skinparam backgroundColor #FFFFFF
+skinparam ArrowColor #000000
+skinparam BorderColor #000000
+left to right direction
+
+actor "Administrator" as Admin
+actor "Pimpinan / Kepala" as Pimpinan
+
+rectangle "«subsystem»\nSistem Pendukung Keputusan Rekrutmen Guru" {
+    usecase "Login Sistem" as UC_Login
+    usecase "Kelola Kriteria & Bobot" as UC_Kriteria
+    usecase "Input Data Pelamar" as UC_Pelamar
+    usecase "Proses Hitung Algoritma WP" as UC_WP
+    usecase "Verifikasi Hasil Seleksi" as UC_Verif
+    usecase "Cetak Laporan Perangkingan" as UC_Cetak
+}
+
+Admin -- UC_Login
+Admin -- UC_Kriteria
+Admin -- UC_Pelamar
+Admin -- UC_WP
+Admin -- UC_Cetak
+
+Pimpinan -- UC_Login
+Pimpinan -- UC_Verif
+Pimpinan -- UC_Cetak
+
+UC_WP ..> UC_Login : <<include>>
+UC_Cetak ..> UC_WP : <<include>>
+@enduml
+```
+
+* **Kode Mermaid Baku (Pendekatan Subgraph):**
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
+flowchart LR
+    subgraph AktorKiri ["Aktor"]
+        Admin(("Administrator"))
+    end
+
+    subgraph BatasSistem ["«subsystem» Sistem Pendukung Keputusan"]
+        UC1(["Login Sistem"])
+        UC2(["Kelola Data Kriteria"])
+        UC3(["Input Data Alternatif"])
+        UC4(["Proses Algoritma WP"])
+        UC5(["Cetak Laporan Perangkingan"])
+    end
+
+    subgraph AktorKanan ["Aktor Eksternal"]
+        Pimpinan(("Pimpinan"))
+    end
+
+    Admin --- UC1
+    Admin --- UC2
+    Admin --- UC3
+    Admin --- UC4
+    Admin --- UC5
+
+    Pimpinan --- UC1
+    Pimpinan --- UC5
+
+    UC4 -.->|"<<include>>"| UC1
+    UC5 -.->|"<<include>>"| UC4
+```
+
+---
+
+### 4.2 Entity Relationship Diagram (ERD Notasi Peter Chen - Persis Gambar 2 & 3)
+Standar diagram basis data konseptual skripsi informatika di Indonesia.
+
+* **Aturan Visual Wajib:**
+  1. **Entitas**: Kotak persegi panjang dengan nama entitas huruf kecil/tunggal (contoh: `mahasiswa`, `dosen`, `mata_kuliah`).
+  2. **Relasi**: Belah ketupat (*diamond*) dengan nama kata kerja di dalamnya (contoh: `membimbing`, `mengambil`, `mengajar`).
+  3. **Atribut**: Elips yang dihubungkan dengan garis ke entitas induknya. Atribut kunci (*primary key*) wajib diawali tanda bintang atau digarisbawahi (contoh: `*nim`, `*kode_mk`).
+  4. **Kardinalitas**: Dituliskan angka `1` dan `N` (atau `M`) pada garis penghubung di dekat entitas/relasi.
+
+* **Kode Mermaid Baku (Simulasi Notasi Chen Menggunakan Custom Node Shapes):**
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
 flowchart TD
-    A(["Mulai"]) --> B[/"Input Data Kriteria & Bobot"/]
-    B --> C["Normalisasi Matriks Keputusan"]
-    C --> D{"Apakah Data Lengkap?"}
-    D -- "Tidak" --> E["Tampilkan Notifikasi Error"]
-    E --> B
-    D -- "Ya" --> F["Hitung Vektor Preferensi (Metode WP)"]
-    F --> G["Perangkingan Nilai Alternatif"]
-    G --> H[/"Output Laporan Perangkingan"/]
-    H --> I(["Selesai"])
+    %% Entitas Utama (Kotak Persegi Panjang)
+    E_MHS["mahasiswa"]
+    E_DOS["dosen"]
+    E_MK["mata_kuliah"]
+    E_RNG["ruang"]
+
+    %% Atribut Mahasiswa (Bentuk Elips)
+    A_NIM(["*nim"]) --- E_MHS
+    A_NM_MHS(["nama_mhs"]) --- E_MHS
+    A_ALM_MHS(["alamat_mhs"]) --- E_MHS
+
+    %% Atribut Dosen (Bentuk Elips)
+    A_NIP(["*nip"]) --- E_DOS
+    A_NM_DOS(["nama_dosen"]) --- E_DOS
+    A_ALM_DOS(["alamat_dosen"]) --- E_DOS
+
+    %% Atribut Mata Kuliah
+    A_KMK(["*kode_mk"]) --- E_MK
+    A_NMMK(["nama_mk"]) --- E_MK
+    A_DSMK(["deskripsi_mk"]) --- E_MK
+
+    %% Atribut Ruang
+    A_KDR(["*kode_ruang"]) --- E_RNG
+    A_LOK(["lokasi"]) --- E_RNG
+    A_KAP(["kapasitas"]) --- E_RNG
+
+    %% Relasi Belah Ketupat (Diamond)
+    R_BIM{"membimbing"}
+    R_AMB{"mengambil"}
+    R_AJR{"mengajar"}
+    R_GNA{"digunakan untuk"}
+
+    %% Hubungan dan Kardinalitas
+    E_DOS --- |"1"| R_BIM
+    R_BIM --- |"N"| E_MHS
+
+    E_MHS --- |"M"| R_AMB
+    R_AMB --- |"N"| E_MK
+
+    E_DOS --- |"1"| R_AJR
+    R_AJR --- |"N"| E_MK
+
+    E_RNG --- |"1"| R_GNA
+    R_GNA --- |"1"| E_MK
+
+    %% Styling Monokrom Standar
+    classDef boxStyle stroke:#000,fill:#fff,stroke-width:1.5px;
+    classDef relStyle stroke:#000,fill:#fff,stroke-width:1.5px;
+    classDef attStyle stroke:#000,fill:#fff,stroke-width:1px;
+
+    class E_MHS,E_DOS,E_MK,E_RNG boxStyle;
+    class R_BIM,R_AMB,R_AJR,R_GNA relStyle;
+    class A_NIM,A_NM_MHS,A_ALM_MHS,A_NIP,A_NM_DOS,A_ALM_DOS,A_KMK,A_NMMK,A_DSMK,A_KDR,A_LOK,A_KAP attStyle;
+```
+
+---
+
+### 4.3 Data Flow Diagram (DFD) — Diagram Konteks & Berjenjang (Persis Standar Gambar 4)
+Menjelaskan aliran data sistem secara fungsional.
+
+* **Aturan Visual Wajib:**
+  1. **Diagram Konteks (Level 0)**:
+     - Tepat satu lingkaran/proses di tengah yang mewakili keseluruhan sistem (contoh: `SI Penjualan Mapleway Healthy & Snack` atau `Sistem Pendukung Keputusan Rekrutmen Guru`).
+     - Seluruh entitas eksternal berupa kotak persegi panjang dengan teks huruf kapital (contoh: `MANAJER`, `MARKETING`, `PEMBELI`).
+     - Aliran data digambarkan dengan garis berpanah yang memiliki label nama dokumen/data yang jelas.
+  2. **DFD Level 1 & Level 2**:
+     - Proses diberi nomor terurut: `1.0`, `2.0`, `3.0`, dst.
+     - Simpanan data (*Data Store*) digambarkan dengan dua garis horizontal sejajar terbuka (`= D1 tbl_pelamar`).
+     - **Aturan Konservasi Data**: Dilarang menghubungkan entitas luar langsung ke entitas luar lainnya, dan dilarang menghubungkan data store langsung ke data store tanpa melewati proses.
+
+* **Kode Mermaid Baku (Diagram Konteks / Level 0 Persis Gambar 4):**
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
+flowchart TD
+    %% Entitas Eksternal
+    MAN["MANAJER"]
+    MKT["MARKETING"]
+    BYR["PEMBELI"]
+
+    %% Proses Utama (Lingkaran Tunggal)
+    PROSES(("SI Penjualan<br/>Mapleway Healthy<br/>& Snack"))
+
+    %% Aliran Data Manajer
+    MAN -->|"Data Penjualan"| PROSES
+    MAN -->|"Data Kategori Produk"| PROSES
+    MAN -->|"Data Produk"| PROSES
+    MAN -->|"Data Admin"| PROSES
+
+    %% Aliran Data Marketing
+    PROSES -->|"Info Konfirmasi Pembayaran"| MKT
+    MKT -->|"Data Konfirmasi Pembayaran"| PROSES
+    PROSES -->|"Data Komentar"| MKT
+    MKT -->|"Info Komentar"| PROSES
+    PROSES -->|"Data Penjualan"| MKT
+
+    %% Aliran Data Pembeli
+    BYR -->|"Data Pembeli"| PROSES
+    PROSES -->|"Validasi Pendaftaran"| BYR
+    PROSES -->|"Info Data Produk"| BYR
+    BYR -->|"Data Pembelian"| PROSES
+    PROSES -->|"Info Konfirmasi Pembayaran"| BYR
+    BYR -->|"Data Konfirmasi Pembayaran"| PROSES
+    PROSES -->|"Info Komentar"| BYR
+    BYR -->|"Data Komentar"| PROSES
+
+    %% Styling Monokrom Bersih
+    style MAN stroke:#000,fill:#fff,stroke-width:1.5px;
+    style MKT stroke:#000,fill:#fff,stroke-width:1.5px;
+    style BYR stroke:#000,fill:#fff,stroke-width:1.5px;
+    style PROSES stroke:#000,fill:#fff,stroke-width:2px;
+```
+
+---
+
+### 4.4 Flowchart Algoritma / Diagram Alir Komputasi (Standar ANSI/ISO)
+Digunakan pada BAB III dan BAB IV untuk merinci langkah kalkulasi matematis (contoh: tahapan normalisasi, pemangkatan bobot, dan perankingan preferensi).
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
+flowchart TD
+    A(["Mulai"]) --> B[/"Input Data Kriteria, Bobot, & Alternatif"/]
+    B --> C["Perbaikan Bobot (Normalisasi Sigma W = 1)"]
+    C --> D["Perhitungan Vektor S (Perkalian Pangkat Bobot)"]
+    D --> E["Penjumlahan Seluruh Nilai Vektor S"]
+    E --> F["Perhitungan Vektor V (Nilai Relatif Preferensi)"]
+    F --> G{"Apakah Ada Nilai Alternatif Sama?"}
+    G -- "Ya" --> H["Terapkan Aturan Pemeringkatan Prioritas Kriteria Utama"]
+    G -- "Tidak" --> I["Urutkan Nilai Vektor V dari Terbesar ke Terkecil"]
+    H --> I
+    I --> J[/"Tampilkan Laporan Rekomendasi Keputusan"/]
+    J --> K(["Selesai"])
 
     style A stroke:#000,fill:#fff,stroke-width:1.5px;
     style B stroke:#000,fill:#fff,stroke-width:1.5px;
@@ -110,114 +353,44 @@ flowchart TD
     style G stroke:#000,fill:#fff,stroke-width:1.5px;
     style H stroke:#000,fill:#fff,stroke-width:1.5px;
     style I stroke:#000,fill:#fff,stroke-width:1.5px;
+    style J stroke:#000,fill:#fff,stroke-width:1.5px;
+    style K stroke:#000,fill:#fff,stroke-width:1.5px;
 ```
 
 ---
 
-### 4.2 Use Case Diagram (UML)
-Menggambarkan interaksi fungsional antara aktor dengan sistem di BAB III.
+### 4.5 Activity Diagram dengan Swimlane (UML)
+Menunjukkan pembagian peran dan aktivitas antara pengguna (*user*) dan sistem.
 
-* **Aturan Kritis:**
-  - Aktor **selalu berada di luar** *System Boundary*.
-  - Nama use case diawali kata kerja tindakan (contoh: *Mengelola Data*, *Melakukan Penilaian*).
-  - Relasi `<<include>>` untuk fungsi wajib, `<<extend>>` untuk fungsi opsional/kondisional.
-
-* **Kode PlantUML Baku:**
 ```plantuml
 @startuml
 skinparam monochrome true
 skinparam shadowing false
 skinparam defaultFontName "Times New Roman"
-left to right direction
+skinparam defaultFontSize 12
 
-actor "Administrator" as Admin
-actor "Pimpinan / Kepala" as Pimpinan
-
-rectangle "Sistem Pendukung Keputusan Rekrutmen" {
-    usecase "Login Sistem" as UC_Login
-    usecase "Kelola Kriteria & Bobot" as UC_Kriteria
-    usecase "Input Data Pelamar" as UC_Pelamar
-    usecase "Proses Penilaian (Algoritma)" as UC_Hitung
-    usecase "Verifikasi Hasil Seleksi" as UC_Verifikasi
-    usecase "Cetak Laporan Perangkingan" as UC_Laporan
-}
-
-Admin --> UC_Login
-Admin --> UC_Kriteria
-Admin --> UC_Pelamar
-Admin --> UC_Hitung
-Admin --> UC_Laporan
-
-Pimpinan --> UC_Login
-Pimpinan --> UC_Verifikasi
-Pimpinan --> UC_Laporan
-
-UC_Hitung ..> UC_Login : <<include>>
-UC_Laporan ..> UC_Hitung : <<include>>
-@enduml
-```
-
-* **Kode Mermaid Baku:**
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
-flowchart LR
-    subgraph AktorPengguna ["Aktor"]
-        Admin(("Administrator"))
-        Pimpinan(("Pimpinan"))
-    end
-
-    subgraph BatasSistem ["Sistem Pendukung Keputusan"]
-        UC1(["Login Sistem"])
-        UC2(["Kelola Data Kriteria"])
-        UC3(["Input Data Alternatif"])
-        UC4(["Proses Perhitungan"])
-        UC5(["Lihat & Cetak Laporan"])
-    end
-
-    Admin --- UC1
-    Admin --- UC2
-    Admin --- UC3
-    Admin --- UC4
-    Admin --- UC5
-    Pimpinan --- UC1
-    Pimpinan --- UC5
-
-    UC4 -.->|"<<include>>"| UC1
-    UC5 -.->|"<<include>>"| UC4
-```
-
----
-
-### 4.3 Activity Diagram (UML)
-Menjelaskan alur aktivitas proses bisnis secara runtut antara aktor dan sistem (dengan swimlane).
-
-* **Kode PlantUML Baku (Dengan Swimlane):**
-```plantuml
-@startuml
-skinparam monochrome true
-skinparam shadowing false
-skinparam defaultFontName "Times New Roman"
-
-|Pengguna|
+|Admin / Pengguna|
 start
-:Mengisi formulir penilaian;
-:Menekan tombol simpan & hitung;
+:Buka menu input penilaian;
+:Masukkan data nilai kriteria alternatif;
+:Klik tombol simpan dan proses;
 
-|Sistem|
-:Menerima data nilai alternatif;
+|Sistem Aplikasi|
+:Validasi kelengkapan data;
 if (Apakah data lengkap?) then (Ya)
-  :Mengambil bobot kriteria dari database;
-  :Melakukan kalkulasi vektor normalisasi;
-  :Menghitung nilai preferensi akhir;
-  :Menyimpan hasil perangkingan ke database;
-  |Pengguna|
-  :Melihat hasil perangkingan di layar;
+  :Ambil bobot kriteria dari database;
+  :Lakukan perhitungan normalisasi bobot;
+  :Hitung nilai Vektor S dan Vektor V;
+  :Simpan hasil perankingan ke tabel hasil;
+  |Admin / Pengguna|
+  :Lihat tabel perangkingan di layar;
+  :Unduh laporan PDF hasil rekomendasi;
   stop
 else (Tidak)
-  |Sistem|
-  :Menampilkan pesan validasi gagal;
-  |Pengguna|
-  :Memperbaiki data input;
+  |Sistem Aplikasi|
+  :Munculkan pesan peringatan data kosong;
+  |Admin / Pengguna|
+  :Lengkapi data yang belum terisi;
   stop
 endif
 @enduml
@@ -225,232 +398,59 @@ endif
 
 ---
 
-### 4.4 Sequence Diagram (UML)
-Menjelaskan pertukaran pesan antar-objek/komponen berdasarkan urutan waktu.
+### 4.6 Sequence Diagram (UML)
+Menampilkan interaksi berurutan antar-objek perangkat lunak.
 
-* **Kode Mermaid Baku:**
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
 sequenceDiagram
     autonumber
-    actor Pengguna as Admin
-    participant UI as Interface Penilaian
-    participant Ctr as Controller SPK
-    participant Alg as Engine Algoritma
+    actor Admin as Administrator
+    participant UI as Interface Form Penilaian
+    participant Ctr as Controller Penilaian
+    participant Alg as Modul Algoritma WP
     participant DB as Basis Data (MySQL)
 
-    Pengguna->>UI: Input nilai kriteria alternatif
+    Admin->>UI: Input nilai kriteria alternatif
+    Admin->>UI: Klik tombol "Proses Perhitungan"
     UI->>Ctr: Kirim request prosesData(input)
     activate Ctr
-    Ctr->>DB: Query bobot kriteria & data alternatif
-    DB-->>Ctr: Return recordset data
-    Ctr->>Alg: Eksekusi hitungPreferensi(data, bobot)
+    Ctr->>DB: Query bobot kriteria aktif
+    DB-->>Ctr: Return data bobot
+    Ctr->>Alg: HitungPreferensi(alternatif, bobot)
     activate Alg
-    Alg-->>Ctr: Return matriks ranking terurut
+    Alg-->>Ctr: Return array nilai vektor S & V
     deactivate Alg
-    Ctr->>DB: Simpan hasil ranking
-    Ctr-->>UI: Tampilkan tabel perankingan
+    Ctr->>DB: Simpan hasil perankingan
+    Ctr-->>UI: Kirim response status sukses & data ranking
     deactivate Ctr
-    UI-->>Pengguna: Tampilan hasil seleksi siap cetak
-```
-
----
-
-### 4.5 Entity-Relationship Diagram (ERD / Relasi Tabel Basis Data)
-ERD wajib menggambarkan skema database aktual sesuai migration atau SQL script.
-
-* **Aturan Kritis:**
-  - Cantumkan nama tabel, primary key (`PK`), foreign key (`FK`), serta tipe data.
-  - Kardinalitas relasi menggunakan notasi *Crow's Foot*:
-    - `||--||` : One-to-One
-    - `||--o{` : One-to-Many
-    - `}|--o{` : Many-to-Many (wajib dipecah lewat tabel asosiasi)
-
-* **Kode Mermaid Baku:**
-```mermaid
-erDiagram
-    PENGGUNA ||--o{ LOG_AKTIVITAS : "melakukan"
-    PENGGUNA {
-        int id_pengguna PK
-        string nama_lengkap
-        string username
-        string password
-        string peran
-    }
-
-    KRITERIA ||--o{ DETAIL_PENILAIAN : "menjadi acuan"
-    KRITERIA {
-        int id_kriteria PK
-        string kode_kriteria
-        string nama_kriteria
-        float bobot
-        string jenis_kriteria
-    }
-
-    ALTERNATIF ||--o{ DETAIL_PENILAIAN : "memiliki nilai"
-    ALTERNATIF ||--o{ HASIL_AKHIR : "mendapatkan ranking"
-    ALTERNATIF {
-        int id_alternatif PK
-        string kode_alternatif
-        string nama_calon
-        string asal_institusi
-        date tanggal_daftar
-    }
-
-    DETAIL_PENILAIAN {
-        int id_detail PK
-        int id_alternatif FK
-        int id_kriteria FK
-        float nilai_input
-    }
-
-    HASIL_AKHIR {
-        int id_hasil PK
-        int id_alternatif FK
-        float nilai_preferensi
-        int peringkat
-        date tanggal_hitung
-    }
-```
-
----
-
-### 4.6 Class Diagram (UML)
-Menampilkan struktur kelas perangkat lunak, atribut, method, dan keterhubungannya di BAB III.
-
-* **Kode PlantUML Baku:**
-```plantuml
-@startuml
-skinparam monochrome true
-skinparam shadowing false
-skinparam defaultFontName "Times New Roman"
-
-class Alternatif {
-  - id: int
-  - kode: string
-  - nama: string
-  + simpan(): boolean
-  + update(): boolean
-  + hapus(): boolean
-}
-
-class Kriteria {
-  - id: int
-  - kode: string
-  - nama: string
-  - bobot: double
-  - jenis: string
-  + getBobotNormalisasi(): double
-}
-
-class SpkCalculator {
-  - alternatifList: List<Alternatif>
-  - kriteriaList: List<Kriteria>
-  + hitungVektorS(): double[]
-  + hitungVektorV(): double[]
-  + urutkanRanking(): List<HasilRanking>
-}
-
-class HasilRanking {
-  - alternatifId: int
-  - skorAkhir: double
-  - peringkat: int
-  + cetakLaporan(): void
-}
-
-SpkCalculator "1" o-- "*" Alternatif
-SpkCalculator "1" o-- "*" Kriteria
-SpkCalculator ..> HasilRanking : generates
-@enduml
-```
-
----
-
-### 4.7 Arsitektur Sistem (Layered Architecture)
-Menunjukkan arsitektur perangkat lunak dari sisi antarmuka, routing, server logika, hingga database.
-
-* **Kode Mermaid Baku:**
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000'}}}%%
-flowchart TD
-    subgraph ClientLayer ["1. Presentation Layer (Client)"]
-        UI["Web Browser / Antarmuka Pengguna (HTML5 / Bootstrap / JS)"]
-    end
-
-    subgraph AppLayer ["2. Application & Controller Layer"]
-        Route["Routing Engine (Web Router)"]
-        Ctrl["Controller Logika Bisnis & Validasi"]
-        Engine["Algoritma SPK (Calculation Module)"]
-    end
-
-    subgraph DataLayer ["3. Data Access & Persistence Layer"]
-        ORM["Data Access Object / ORM (Query Builder)"]
-        DB[(Basis Data Relasional MySQL)]
-    end
-
-    UI <-->|"HTTP Request / JSON Response"| Route
-    Route --> Ctrl
-    Ctrl <--> Engine
-    Ctrl <--> ORM
-    ORM <-->|"SQL Query / Resultset"| DB
-
-    style ClientLayer stroke:#000,fill:#fff,stroke-dasharray: 5 5;
-    style AppLayer stroke:#000,fill:#fff,stroke-dasharray: 5 5;
-    style DataLayer stroke:#000,fill:#fff,stroke-dasharray: 5 5;
-    style UI stroke:#000,fill:#fff;
-    style Route stroke:#000,fill:#fff;
-    style Ctrl stroke:#000,fill:#fff;
-    style Engine stroke:#000,fill:#fff;
-    style ORM stroke:#000,fill:#fff;
-    style DB stroke:#000,fill:#fff;
+    UI-->>Admin: Tampilkan tabel rekomendasi keputusan
 ```
 
 ---
 
 ## 5. ATURAN ANTI-CACAT SINTAKS (*ZERO-DEFECT SYNTAX RULES*)
 
-Agar diagram tidak mengalami error saat di-*compile* atau rusak saat diekspor, patuhi 7 aturan ketat berikut:
-
-1. **Wajib Menggunakan Tanda Petik pada Label Khusus**:
-   - *Salah:* `A(Proses (Normalisasi)) --> B` (Error karena kurung di dalam kurung).
-   - *Benar:* `A["Proses (Normalisasi)"] --> B` (Aman dari benturan sintaks).
-2. **Hindari Garis Menyilang (*Line Crossing Prevention*)**:
-   - Gunakan arah `TD` (Top-to-Bottom) untuk diagram alir sekuensial dan `LR` (Left-to-Right) untuk Use Case.
-   - Jangan membuat tautan balik yang membelah diagram jika bisa menggunakan simpul konektor (*Connector node*).
-3. **Pemisahan Teks Panjang Menggunakan Baris Baru**:
-   - Batasi panjang teks dalam satu kotak simpul maksimal 4-5 kata per baris. Gunakan `\n` atau `<br/>` untuk memecah baris.
-4. **Semantik Aktor & Boundary yang Valid**:
-   - Aktor manusia tidak boleh diletakkan di dalam kotak sistem (*System Boundary*).
-5. **Kardinalitas Basis Data yang Logis**:
-   - Dilarang membuat relasi `Many-to-Many` (`M:N`) langsung tanpa tabel perantara (*junction table*) pada rancangan fisik ERD.
-6. **Proporsi Skala Cetak (Print Dimensions)**:
-   - Lebar maksimum diagram saat ditempelkan ke Microsoft Word adalah **14 cm** (agar tidak melanggar margin kiri 4 cm dan kanan 3 cm kertas A4).
-   - Tinggi diagram tidak boleh melebihi **20 cm** agar tidak memicu pemotongan halaman secara liar.
-7. **Resolusi Ekspor**:
-   - Format wajib: **Vektor SVG** (pilihan utama) atau **PNG monokrom minimum 300 DPI**.
+Untuk mencegah kegagalan ekspor atau kerusakan tata letak dokumen Word:
+1. **Wajib Membungkus Label Khusus dengan Tanda Petik**:
+   - Selalu gunakan `["Teks (Keterangan)"]` jika memuat kurung atau karakter khusus.
+2. **Kerapian Garis Hubung**:
+   - Atur posisi node agar garis panah tidak saling memotong secara semrawut (*avoid messy line crossing*).
+3. **Proporsi Dimensi Gambar pada Kertas A4 (Smart Image Sizing)**:
+   - **Diagram Landscape (lebar ≥ tinggi)**: Lebar maksimal **13.5 cm**, tinggi maksimal **11.0 cm**.
+   - **Diagram Portrait (tinggi > lebar)**: Tinggi maksimal **12.0 cm** agar tidak terdorong ke halaman baru dan terpisah dari caption.
+   - **Anti-Orphan Caption**: Setiap gambar wajib dipasangkan atribut `keep_with_next = True` pada paragraf Word.
+   - **Format Caption Baku**: Ditempatkan di **bawah tengah** gambar dengan format: **Gambar X.X** (Bold) dilanjutkan spasi ganda dan Judul Gambar (Reguler).
+4. **Kualitas Resolusi**: Format PNG minimum 300 DPI atau format Vektor SVG murni.
 
 ---
 
-## 6. PENAMAAN BERKAS & LOKASI PENYIMPANAN
-Seluruh diagram yang dihasilkan wajib disimpan pada folder:  
-`ASSETS/DIAGRAM/`
+## 6. QUALITY CONTROL CHECKLIST SEBELUM DIAGRAM MASUK NASKAH
 
-Format penamaan berkas:
-- Flowchart Algoritma : `diagram_3_1_flowchart_algoritma.[puml/mmd/svg/png]`
-- Use Case Diagram    : `diagram_3_2_use_case.[puml/mmd/svg/png]`
-- Activity Diagram    : `diagram_3_3_activity_penilaian.[puml/mmd/svg/png]`
-- Sequence Diagram    : `diagram_3_4_sequence_kalkulasi.[puml/mmd/svg/png]`
-- Class Diagram       : `diagram_3_5_class_diagram.[puml/mmd/svg/png]`
-- Entity Relationship : `diagram_3_6_erd.[puml/mmd/svg/png]`
-- Arsitektur Sistem   : `diagram_3_7_arsitektur_sistem.[puml/mmd/svg/png]`
-
----
-
-## 7. QUALITY CONTROL CHECKLIST SEBELUM DIAGRAM MASUK NASKAH
-
-Sebelum diagram dimasukkan ke dalam draf naskah skripsi, agent wajib memverifikasi:
-- [ ] **Sintaks Valid**: Tidak ada pesan error parser pada editor Mermaid/PlantUML.
-- [ ] **Warna Monokrom Murni**: Latar putih (#FFFFFF), garis hitam solid (#000000), tanpa bayangan (*no shadows*).
-- [ ] **Kesesuaian Teks**: Setiap entitas, tabel, field, dan aktor memiliki kesamaan nama 100% dengan teks di [CONTEXT_SKRIPSI.txt](CONTEXT_SKRIPSI.txt).
-- [ ] **Nomor & Caption**: Memiliki caption resmi di bawah gambar (Contoh: *Gambar 3.1 Flowchart Metode Weighted Product*).
-- [ ] **Paragraf Penjelas**: Terdapat minimal satu paragraf narasi analitis di dalam teks skripsi yang membahas diagram tersebut.
+Sebelum diagram disematkan ke draf BAB III, BAB IV, atau BAB V:
+- [ ] Diagram sesuai 100% dengan salah satu contoh visual resmi di `ASSETS/DIAGRAM/STANDARD_EXAMPLES/`.
+- [ ] Latar belakang putih bersih (#FFFFFF), garis hitam tegas (#000000), tanpa warna-warni dekoratif dan tanpa efek bayangan (*no drop-shadow*).
+- [ ] Seluruh nama aktor, use case, entitas, dan proses konsisten dengan [CONTEXT_SKRIPSI.txt](CONTEXT_SKRIPSI.txt).
+- [ ] ERD memuat Primary Key (*underline* atau `*`) dan label rasio kardinalitas (`1:1`, `1:N`, `M:N`).
+- [ ] DFD mematuhi aturan konservasi aliran data (tidak ada *black hole* atau *miracle*).
+- [ ] Terdapat narasi paragraf akademik pengantar dan penjelas diagram di dalam naskah skripsi.

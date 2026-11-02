@@ -1,0 +1,35 @@
+# REFERENCE REGISTRY (YAML FORMAT)
+# Pelacakan Siklus Hidup Referensi Ilmiah: DISCOVERED -> DOWNLOADED -> READ -> VERIFIED -> USED
+references:
+  - id: "REF-001"
+    cite_key: "turban2007"
+    title: "Decision Support Systems and Intelligent Systems"
+    authors:
+      - "Efraim Turban"
+      - "Jay E. Aronson"
+      - "Ting-Peng Liang"
+    year: 2007
+    type: "buku"
+    publisher: "Pearson Prentice Hall"
+    doi: null
+    pdf_path: "REFERENSI/pdf/buku/REF-001_turban_2007.pdf"
+    status: "VERIFIED"
+    cited_in:
+      - "BAB II Landasan Teori"
+    key_findings: "Definisi sistem pendukung keputusan, komponen basis model, dan arsitektur pengambil keputusan."
+
+  - id: "REF-002"
+    cite_key: "pressman2014"
+    title: "Software Engineering: A Practitioner's Approach"
+    authors:
+      - "Roger S. Pressman"
+      - "Bruce R. Maxim"
+    year: 2014
+    type: "buku"
+    publisher: "McGraw-Hill"
+    doi: null
+    pdf_path: "REFERENSI/pdf/buku/REF-002_pressman_2014.pdf"
+    status: "VERIFIED"
+    cited_in:
+      - "BAB III Analisa dan Perancangan Sistem"
+    key_findings: "Metodologi rekayasa perangkat lunak waterfall, pengujian black box testing, dan pemodelan UML."

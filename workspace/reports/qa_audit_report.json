@@ -1,0 +1,27 @@
+{
+  "status": "REVIEW",
+  "placeholders_count": 0,
+  "missing_citations_count": 0,
+  "missing_images_count": 0,
+  "total_words": 5129,
+  "estimated_pages": 17.1,
+  "bullet_violations_count": 0,
+  "pdf_taxonomy": {
+    "exists": true,
+    "categories": {
+      "belum_diverifikasi": 0,
+      "jurnal": 0,
+      "buku": 0,
+      "prosiding": 0,
+      "laporan_resmi": 0,
+      "skripsi_tesis": 0
+    },
+    "total_pdfs": 0
+  },
+  "config_valid": true,
+  "config_details": {
+    "thesis.yaml": "VALID",
+    "document.yaml": "VALID",
+    "chapters.yaml": "VALID"
+  }
+}

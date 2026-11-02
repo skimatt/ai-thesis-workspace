@@ -1,0 +1,38 @@
+# DOCUMENT TYPOGRAPHY & LAYOUT CONFIGURATION
+# Standar Baku Skripsi Akademik Informatika Indonesia
+document:
+  paper_size: "A4"
+  paper_width_cm: 21.0
+  paper_height_cm: 29.7
+  paper_weight_gram: 80
+
+  # Margin Baku Skripsi Indonesia (Kiri 4, Atas 4, Kanan 3, Bawah 3 cm)
+  margins_cm:
+    top: 4.0
+    left: 4.0
+    right: 3.0
+    bottom: 3.0
+
+  # Tipografi Times New Roman Standar Nasional
+  font: "Times New Roman"
+  normal_pt: 12
+  heading_1_pt: 14     # Judul BAB (Bold, Uppercase, Center)
+  heading_2_pt: 12     # Subbab Tingkat 1 (Bold, Left)
+  heading_3_pt: 12     # Sub-subbab Tingkat 2 (Bold, Left)
+  caption_pt: 11       # Judul Tabel & Gambar
+  table_cell_pt: 9.5   # Isi Tabel Akademik
+
+  # Format Paragraf & Spasi
+  line_spacing: 1.5
+  first_line_indent_cm: 1.25
+  alignment: "justify"
+
+  # Konvensi Penomoran Halaman
+  front_matter_page_number: "roman_lower"          # Romawi kecil di tengah bawah (i, ii, iii...)
+  body_page_number: "arabic_continuous"            # Angka Arab berlanjut (1, 2, 3...)
+  chapter_first_page_position: "bottom_center"     # Awal BAB di tengah bawah
+  chapter_continuation_position: "top_right"       # Halaman lanjutan di kanan atas
+
+  # Gaya Sitasi & Tabel
+  citation_style: "harvard"                        # Harvard (Nama, Tahun)
+  table_style: "open_academic_three_lines"         # Model 3 garis terbuka monokrom

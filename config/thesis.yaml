@@ -1,0 +1,28 @@
+# THESIS METADATA CONFIGURATION
+# Parameter Identitas & Status Penelitian Skripsi
+thesis:
+  title: "[JUDUL PENELITIAN SKRIPSI INFORMATIKA]"
+  author: "[NAMA MAHASISWA]"
+  student_id: "[NIM / NPM]"
+  study_program: "Informatika"
+  faculty: "Fakultas Ilmu Komputer (FIKOM)"
+  institution: "Universitas Almuslim"
+  academic_year: "2025/2026"
+  year: "2026"
+  
+  # Dosen Pembimbing
+  supervisor_1: "[NAMA DOSEN PEMBIMBING I, GELAR]"
+  nidn_supervisor_1: "[NIDN PEMBIMBING I]"
+  supervisor_2: "[NAMA DOSEN PEMBIMBING II, GELAR]"
+  nidn_supervisor_2: "[NIDN PEMBIMBING II]"
+  
+  # Pimpinan Fakultas
+  dean: "Taufiq, S.T., M.T"
+  nidn_dean: "0120057501"
+
+  # Parameter Riset Spesifik
+  field_of_study: "[BIDANG PEMINATAN / KEAHLIAN: SPK / RPL / AI / JARINGAN]"
+  research_object: "[NAMA INSTANSI / PERUSAHAAN OBJEK RISET]"
+  research_location: "[ALAMAT LENGKAP OBJEK RISET]"
+  core_algorithm: "[METODE KOMPUTASI / ALGORITMA INTI]"
+  status: "active_draft"

@@ -1,0 +1,419 @@
+MASTER EXECUTION PROMPT
+FULL THESIS EXECUTION (UNIVERSAL INFORMATIKA ENGINE)
+FAKULTAS ILMU KOMPUTER — UNIVERSITAS ALMUSLIM
+
+Mulai sekarang jalankan seluruh proyek skripsi dari kondisi workspace saat ini sampai menghasilkan naskah skripsi final yang siap diperiksa dan diserahkan.
+
+Jangan terburu-buru.
+
+Prioritas utama adalah akurasi, validitas akademik, konsistensi, keterlacakan sumber, validitas data empiris, dan kualitas tata letak dokumen resmi.
+
+Jangan mengejar kecepatan.
+
+Jangan melompati tahapan.
+
+Jangan menganggap pekerjaan selesai hanya karena file teks sudah dibuat.
+
+Jika sebuah tahap belum valid, perbaiki tahap tersebut sebelum melanjutkan.
+
+==================================================
+ATURAN MUTLAK & HIERARKI KENDALI
+==================================================
+
+Patuhi seluruh aturan dalam AGENTS.md, CONTEXT_SKRIPSI.txt, INDEX_SOP.md, dan seluruh SOP yang berlaku.
+
+Gunakan hierarki aturan 6-Level:
+
+1. Instruksi pengguna terbaru.
+2. AGENTS.md (Master Governance).
+3. CONTEXT_SKRIPSI.txt (Substansi & Parameter Penelitian Terkunci).
+4. SOP resmi di folder SOP/ (Penulisan, Format, Diagram, Referensi, Integritas).
+5. Referensi ilmiah terverifikasi dan CONTOH_SKRIPSI/Contoh_skripsi.docx.
+6. Pengetahuan umum AI Agent.
+
+Tetap tegakkan 4 PILAR ANTI-HALUSINASI:
+
+- DO NOT INVENT (Dilarang mengarang fakta, regulasi, teori, atau angka).
+- NO SOURCE, NO CLAIM (Dilarang membuat klaim sitasi tanpa sumber berstatus VERIFIED di REFERENSI/index.md).
+- NO DATA, NO RESULT (Dilarang membuat data sampel/responden palsu, nilai bobot fiktif, atau metrik hasil pengujian rekaan).
+- NO APPROVAL, NO STRUCTURAL CHANGE (Dilarang merombak judul, rumusan masalah, batasan, atau metode yang telah LOCKED).
+
+Jika informasi belum tersedia, jangan menebak dengan asumsi.
+
+Jika data penelitian belum tersedia, jangan membuat data sintetis lalu menyajikannya sebagai data nyata.
+
+Jika hasil penelitian belum tersedia, jangan membuat hasil penelitian fiktif.
+
+Jika keputusan akademik belum ditentukan, tandai dengan jelas dan lanjutkan bagian lain yang tidak bergantung pada keputusan tersebut.
+
+==================================================
+TUJUAN AKHIR
+==================================================
+
+Hasil akhir harus berupa paket naskah skripsi akademik lengkap yang mengacu pada parameter penelitian di CONTEXT_SKRIPSI.txt dengan:
+
+- Identitas mahasiswa, objek riset, dan judul skripsi yang sinkron.
+- Struktur 6 BAB resmi Fakultas Ilmu Komputer Universitas Almuslim.
+- Landasan teori berakar pada sumber literatur primer yang terverifikasi.
+- Sistem sitasi konsisten Harvard (Nama, Tahun) yang terhubung 100% ke Daftar Pustaka.
+- Data penelitian empiris yang valid dan dapat diverifikasi.
+- Perhitungan metode komputasi / algoritma inti yang reproducible (dapat dihitung ulang).
+- Perancangan pemodelan sistem (DFD/UML dan ERD monokrom beresolusi tinggi).
+- Implementasi antarmuka sistem nyata (bukan mockup fiktif).
+- Pengujian fungsionalitas sistem (Black Box Testing) dan analisis hasil yang mendalam.
+- Format tata letak dokumen Word baku A4 (4-4-3-3 cm), Times New Roman, Spasi 1.5 (Baku Almuslim), Section Breaks dinamis, dan tabel 3 garis terbuka.
+- Quality Control 10 aspek lolos uji Quality Gate.
+- Dokumen naskah final siap serah tersimpan di folder OUTPUT/.
+
+Targetnya adalah menghasilkan draft akademik paling lengkap, terverifikasi, dan bebas cacat format yang siap diperiksa oleh mahasiswa dan dosen pembimbing.
+
+==================================================
+PHASE 0
+BASELINE DAN WORKSPACE LOCK
+==================================================
+
+Sebelum pekerjaan substantif dimulai:
+
+1. Baca ulang AGENTS.md (Master Governance & Python Tooling Policy).
+2. Baca CONTEXT_SKRIPSI.txt (Identitas, rumusan masalah, metode, dan status data terkunci).
+3. Baca SOP/INDEX_SOP.md dan seluruh SOP terkait.
+4. Periksa struktur berkas di folder drafts/ (00_BAGIAN_AWAL.md s.d. 08_DAFTAR_RIWAYAT_HIDUP.md).
+5. Periksa katalog literatur di REFERENSI/index.md.
+6. Periksa berkas acuan CONTOH_SKRIPSI/Contoh_skripsi.docx.
+7. Periksa master template Word AI_program/working/template_skripsi_almuslim.docx.
+8. Periksa kesiapan skrip otomasi di AI_program/scripts/.
+
+Buat catatan baseline kondisi proyek:
+- apa yang sudah tersedia;
+- apa yang belum tersedia;
+- parameter apa saja yang sudah LOCKED;
+- data apa yang membutuhkan input pengguna ([NEEDS USER INPUT] / [DATA REQUIRED]).
+
+Jangan mengubah substansi penelitian pada fase ini.
+
+==================================================
+PHASE 1
+ACADEMIC GAP & CONTEXT AUDIT
+==================================================
+
+Audit konteks penelitian di CONTEXT_SKRIPSI.txt secara menyeluruh:
+
+Periksa:
+- Judul skripsi lengkap.
+- Latar belakang fenomena masalah.
+- Rumusan masalah.
+- Batasan masalah (ruang lingkup).
+- Tujuan penelitian.
+- Manfaat penelitian.
+- Objek dan lokasi penelitian faktual.
+- Metode komputasi / algoritma inti yang dipilih.
+- Arsitektur teknologi perangkat lunak (bahasa, framework, DBMS).
+- Kebutuhan data empiris.
+- Rencana pengujian sistem.
+
+Cari kontradiksi internal, istilah yang tidak konsisten, atau parameter yang belum lengkap.
+Jika terdapat parameter yang belum ditentukan pengguna, tandai dengan label [NEEDS USER INPUT].
+
+==================================================
+PHASE 2
+RESEARCH DAN SOURCE ACQUISITION
+==================================================
+
+Lakukan pengumpulan dan verifikasi literatur ilmiah yang relevan dengan topik, metode komputasi, dan objek riset di CONTEXT_SKRIPSI.txt.
+
+Prioritaskan sumber kredibel:
+1. Jurnal ilmiah nasional terakreditasi (SINTA 1–4) & internasional bereputasi (Scopus/WoS).
+2. Prosiding konferensi ilmiah nasional/internasional resmi.
+3. Buku teks akademik resmi ber-ISBN.
+4. Dokumen regulasi pemerintah / standar nasional (ISO, SNI, Kemendikbudristek).
+5. Dokumentasi resmi bahasa pemrograman, framework, atau DBMS.
+
+Pastikan setiap sumber yang dikumpulkan:
+- Penulis, judul, tahun, dan nama jurnal valid.
+- Memiliki DOI aktif atau URL resmi penerbit.
+- Berkas PDF tersimpan di folder REFERENSI/ jika diunduh.
+- Tercatat di REFERENSI/index.md dengan ID REF-001, REF-002, dst.
+
+Siklus status referensi:
+DISCOVERED → DOWNLOADED → READ → VERIFIED → USED.
+Hanya sumber berstatus VERIFIED yang boleh disitasi dalam draf naskah.
+
+==================================================
+PHASE 3
+RESEARCH MATRIX & STATE-OF-THE-ART
+==================================================
+
+Bangun pemetaan literatur terhadap kebutuhan naskah:
+- Tinjau minimal 3–5 penelitian terdahulu yang relevan dengan metode komputasi atau kasus yang diangkat.
+- Susun Tabel Matriks Penelitian Terdahulu (Peneliti & Tahun, Judul, Metode, Hasil Utama, dan Posisi/Kebaruan Penelitian Ini).
+- Petakan sitasi ke dalam BAB dan subbab spesifik di folder drafts/.
+- Pastikan tidak ada klaim teori yang berdiri sendiri tanpa sitasi pendukung.
+
+==================================================
+PHASE 4
+DATA RESEARCH & EMPIRICAL EVIDENCE
+==================================================
+
+Identifikasi seluruh kebutuhan data empiris objek penelitian di CONTEXT_SKRIPSI.txt:
+- Daftar alternatif objek yang dinilai/dianalisis.
+- Kriteria dan subkriteria penilaian.
+- Nilai bobot kriteria dan penentuan atribut (Benefit / Cost).
+- Skala konversi nilai parameter.
+- Periode waktu data dan unit pengukuran.
+- Narasumber wawancara dan dokumen arsip instansi.
+
+Jika dataset mentah belum diserahkan oleh mahasiswa:
+DILARANG MEREKAYASA ANGKA DATASET.
+Tandai bagian tersebut dengan label [DATA REQUIRED], lalu lanjutkan bagian draf lain yang tidak bergantung pada dataset tersebut.
+
+==================================================
+PHASE 5
+ACADEMIC DECISION GATE
+==================================================
+
+Sebelum mengunci perancangan sistem dan perhitungan matematis:
+- Pastikan kriteria final, bobot, dan skala penilaian telah disetujui.
+- Pastikan formula matematis algoritma telah diverifikasi sesuai teori formal.
+- Pastikan metode pengembangan sistem (Waterfall, Agile, RAD) telah ditentukan.
+
+Jika ada opsi metodologi yang membutuhkan persetujuan mahasiswa/dosen, buat daftar keputusan:
+ACADEMIC DECISION REQUIRED
+Setelah mahasiswa mengonfirmasi, kunci keputusan tersebut di CONTEXT_SKRIPSI.txt.
+
+==================================================
+PHASE 6
+STRUKTUR SKRIPSI 6 BAB ALMUSLIM
+==================================================
+
+Kunci struktur naskah ke dalam format 6 BAB resmi Fakultas Ilmu Komputer Universitas Almuslim:
+
+BAGIAN AWAL (Romawi kecil: i, ii, iii, ...)
+- Halaman Judul
+- Halaman Pengesahan
+- Halaman Pernyataan Keaslian
+- Kata Pengantar
+- Abstrak (Bahasa Indonesia & Bahasa Inggris)
+- Daftar Isi, Daftar Tabel, Daftar Gambar
+
+BATANG TUBUH (Angka Arab: 1, 2, 3, ...)
+- BAB I PENDAHULUAN
+- BAB II LANDASAN TEORI
+- BAB III ANALISA DAN PERANCANGAN SISTEM
+- BAB IV IMPLEMENTASI SISTEM
+- BAB V PENGUJIAN DAN PEMBAHASAN
+- BAB VI PENUTUP
+
+BAGIAN AKHIR
+- DAFTAR PUSTAKA (Harvard Style alfabetis)
+- DAFTAR RIWAYAT HIDUP (Biodata Mahasiswa)
+- LAMPIRAN
+
+Sinkronkan draf dengan file-file yang ada di folder drafts/ (00_BAGIAN_AWAL.md s.d. 08_DAFTAR_RIWAYAT_HIDUP.md).
+
+==================================================
+PHASE 7
+WRITING BAB I — PENDAHULUAN
+==================================================
+
+Tulis drafts/01_BAB_I.md secara mendalam dengan alur deduktif formal:
+- 1.1 Latar Belakang Masalah: Piramida terbalik (kondisi ideal → masalah nyata instansi → bukti empiris lapangan → dampak jika dibiarkan → urgensi solusi metode komputasi).
+- 1.2 Rumusan Masalah: Pertanyaan penelitian yang tajam, terarah, dan terukur.
+- 1.3 Batasan Masalah: Ruang lingkup data, metode, dan platform sistem agar tidak meluas.
+- 1.4 Tujuan Penelitian: Selaras 1:1 dengan butir rumusan masalah.
+- 1.5 Manfaat Penelitian: Manfaat praktis (instansi), akademis (kampus/peneliti lain), dan pribadi.
+- 1.6 Metodologi Penelitian: Pengamatan (observasi), wawancara, dan studi pustaka.
+- 1.7 Sistematika Penulisan: Ringkasan isi BAB I hingga BAB VI.
+
+Gunakan kaidah EYD V, bahasa akademik baku, hindari AI slop, dan terapkan sitasi Harvard.
+
+==================================================
+PHASE 8
+WRITING BAB II — LANDASAN TEORI
+==================================================
+
+Tulis drafts/02_BAB_II.md berdasarkan literatur terverifikasi:
+- 2.1 Konsep Sistem dan Objek Penelitian: Teori domain permasalahan sesuai studi kasus.
+- 2.2 Metode Komputasi / Algoritma Inti: Definisi formal, notasi variabel, rumus matematis, dan tahapan perhitungan langkah demi langkah.
+- 2.3 Pemodelan Sistem dan Basis Data: Teori DFD/UML dan ERD.
+- 2.4 Perangkat Lunak Pendukung: Bahasa pemrograman, framework, dan DBMS yang digunakan.
+- 2.5 Penelitian Terkait: Narasi kritis perbandingan penelitian terdahulu dan Tabel Matriks Penelitian Terdahulu (Tabel 2.1).
+
+Dilarang memasukkan teori umum yang tidak memiliki relevansi dengan sistem yang dibangun.
+
+==================================================
+PHASE 9
+WRITING BAB III — ANALISA DAN PERANCANGAN SISTEM
+==================================================
+
+Tulis drafts/03_BAB_III.md secara komprehensif:
+- 3.1 Analisa Sistem: Analisa sistem lama (kelemahan), analisa sistem baru (solusi), dan analisa kebutuhan fungsional/non-fungsional (data, hardware, software, output).
+- 3.2 Penentuan Kriteria dan Bobot: Tabel kriteria keputusan (Tabel 3.1), penetapan bobot, atribut Benefit/Cost, dan tabel konversi nilai parameter.
+- 3.3 Perancangan Sistem: Diagram Konteks, DFD Level 0 s.d. Level 2 (atau Use Case, Activity, Sequence Diagram) menggunakan standar monokrom SOP_DIAGRAM.md.
+- 3.4 Perancangan Basis Data: Entity Relationship Diagram (ERD) dan Desain Struktur File Database (kamus data setiap tabel).
+- 3.5 Perancangan Tampilan Antarmuka: Wireframe/mockup form login, dashboard, input master, proses hitung, dan laporan.
+
+==================================================
+PHASE 10
+COMPUTATIONAL / ALGORITHM VALIDATION
+==================================================
+
+Validasi proses komputasi metode secara reproducible:
+1. Periksa matriks keputusan awal dari data riil alternatif dan kriteria.
+2. Hitung tahapan algoritma secara matematis (normalisasi bobot, kalkulasi matriks preferensi, pemangkatan vektor, atau jarak solusi).
+3. Pastikan hasil perangkingan matematis manual cocok 100% dengan hasil perhitungan sistem perangkat lunak.
+4. Simpan skrip simulasi hitung di folder AI_program/scripts/ jika diperlukan.
+5. Jika ada perbedaan angka antara hitungan manual dan sistem: STOP dan investigasi hingga konsisten.
+
+==================================================
+PHASE 11
+SYSTEM ARCHITECTURE & DIAGRAM-AS-CODE
+==================================================
+
+Rancang seluruh diagram teknis sistem:
+- Gunakan format Diagram-as-Code (Mermaid .mmd atau PlantUML .puml).
+- Terapkan gaya visual monokromatik Almuslim (garis hitam tipis, teks hitam Times New Roman, latar putih bersih, tanpa bayangan/warna).
+- Simpan berkas kode diagram di ASSETS/DIAGRAM/.
+- Render diagram menjadi PNG 300 DPI menggunakan AI_program/scripts/render_diagram.py.
+- Pastikan relasi tabel database di ERD cocok dengan tabel di kamus data.
+
+==================================================
+PHASE 12
+IMPLEMENTATION MAPPING
+==================================================
+
+Petakan lingkungan implementasi sistem:
+- Spesifikasi lingkungan perangkat keras dan perangkat lunak yang digunakan.
+- Struktur direktori kode program aplikasi nyata mahasiswa.
+- Pastikan seluruh modul inti (input kriteria, input alternatif, pemrosesan algoritma, dan laporan hasil) berfungsi dengan baik.
+
+==================================================
+PHASE 13
+WRITING BAB IV — IMPLEMENTASI SISTEM
+==================================================
+
+Tulis drafts/04_BAB_IV.md berdasarkan bukti sistem nyata:
+- 4.1 Batasan dan Lingkungan Implementasi: Spesifikasi hardware dan software.
+- 4.2 Implementasi Modul Komputasi: Penjelasan potongan source code inti algoritma.
+- 4.3 Implementasi Antarmuka Pengguna: Tangkapan layar (screenshot) asli form login, dashboard, input kriteria, input data alternatif, proses komputasi, dan cetak laporan keputusan.
+
+Setiap gambar tangkapan layar wajib:
+- Berasal dari sistem nyata mahasiswa di ASSETS/SCREENSHOOT/.
+- Memiliki nomor gambar (Gambar 4.1, dst.), caption di bawah tengah, dan paragraf analisis penjelas.
+
+==================================================
+PHASE 14
+WRITING BAB V — PENGUJIAN DAN PEMBAHASAN
+==================================================
+
+Tulis drafts/05_BAB_V.md berdasarkan hasil pengujian faktual:
+- 5.1 Pengujian Model / Algoritma Komputasi: Tabel data alternatif nyata, langkah hitung manual, langkah hitung sistem, dan tabel perbandingan kesesuaian hasil (100% valid).
+- 5.2 Pengujian Fungsional Sistem: Tabel Black Box Testing (Tabel 5.1) yang mencakup komponen yang diuji, skenario uji, hasil yang diharapkan, hasil pengamatan, dan kesimpulan validitas.
+- 5.3 Pembahasan Hasil Penelitian: Evaluasi hasil keputusan sistem, perbandingan efisiensi waktu kerja, transparansi penilaian, serta kelebihan dan keterbatasan sistem.
+
+Dilarang membuat data pengujian atau skor akurasi fiktif.
+
+==================================================
+PHASE 15
+WRITING BAB VI — PENUTUP
+==================================================
+
+Tulis drafts/06_BAB_VI.md dengan ringkas, padat, dan solutif:
+- 6.1 Kesimpulan: Menjawab rumusan masalah dan tujuan penelitian di BAB I secara konsisten dan berbasis bukti pengujian.
+- 6.2 Saran: Saran teknis pengembangan sistem di masa depan dan saran operasional pemanfaatan sistem bagi objek penelitian.
+
+==================================================
+PHASE 16
+CROSS-CHAPTER CONSISTENCY AUDIT
+==================================================
+
+Lakukan audit sinkronisasi lintas seluruh bab:
+- Judul = Rumusan Masalah = Tujuan = Metode = Data = Implementasi = Hasil = Kesimpulan.
+- Konsistensi istilah teknis (istilah asing dicetak miring / italic).
+- Konsistensi jumlah kriteria dan nama alternatif dari BAB I sampai BAB VI.
+- Konsistensi penomoran gambar (Gambar [BAB].[No]) dan tabel (Tabel [BAB].[No]).
+
+==================================================
+PHASE 17
+REFERENCE & CITATION AUDIT
+==================================================
+
+Jalankan audit sitasi:
+- Pastikan seluruh sitasi dalam teks menggunakan format Harvard: (Nama, Tahun) atau Nama (Tahun).
+- Dilarang keras menggunakan nomor numerik IEEE [1].
+- Pastikan setiap sitasi terdaftar di REFERENSI/index.md berstatus minimal VERIFIED.
+- Pastikan Daftar Pustaka (drafts/07_DAFTAR_PUSTAKA.md) disusun secara alfabetis tanpa nomor urut, menggunakan hanging indent dan spasi 1.0.
+
+==================================================
+PHASE 18
+DOCUMENT ENGINEERING & COMPILATION
+==================================================
+
+Jalankan kompilasi otomatis naskah skripsi:
+1. Pastikan seluruh tabel telah mengikuti standar Open Table 3 garis via table_styler.py.
+2. Jalankan skrip AI_program/scripts/build_skripsi.py untuk menyatukan seluruh file di drafts/ ke dalam format Word baku.
+3. Pastikan penomoran halaman Section Breaks Word terkunci:
+   - Bagian Awal: Romawi kecil (i, ii, iii, ...) di tengah bawah.
+   - Bagian Utama & Akhir: Angka Arab (1, 2, 3, ...) di kanan atas, kecuali halaman pertama setiap BAB berada di tengah bawah.
+4. Periksa margin halaman A4 (Kiri 4 cm, Atas 4 cm, Kanan 3 cm, Bawah 3 cm) dan font Times New Roman 12 pt spasi 1.5.
+
+==================================================
+PHASE 19
+FINAL QUALITY GATE & PRE-FLIGHT AUDIT
+==================================================
+
+Jalankan skrip inspeksi otomatis:
+python AI_program/scripts/qa_audit.py
+
+Verifikasi 10 aspek QC:
+1. Academic QA (Kesesuaian masalah, tujuan, dan metode).
+2. Content QA (Alur deduktif dan kedalaman analisis).
+3. Source QA (Keabsahan jurnal di REFERENSI/index.md).
+4. Citation QA (Format Harvard bebas sitasi bodong).
+5. Data QA (Data empiris faktual tanpa angka rekaan).
+6. Algorithm QA (Kalkulasi metode komputasi valid dan cocok).
+7. Technical QA (Arsitektur sistem perangkat lunak).
+8. Diagram QA (Diagram monokrom resolusi tinggi 300 DPI).
+9. Formatting QA (Margin 4-4-3-3, font Times New Roman, tabel 3 garis, nomor halaman).
+10. Page Thickness QA (Estimasi naskah memenuhi syarat minimal 80 halaman).
+
+Semua poin harus berstatus PASS sebelum naskah dinyatakan siap rilis.
+
+==================================================
+PHASE 20
+FINALIZATION & EXPORT
+==================================================
+
+Setelah seluruh Quality Gate berstatus PASS:
+1. Simpan dokumen naskah final di folder OUTPUT/:
+   - SKRIPSI_FINAL_[NAMA_MAHASISWA]_[TAHUN].docx
+   - SKRIPSI_FINAL_[NAMA_MAHASISWA]_[TAHUN].pdf
+2. Pastikan folder OUTPUT/ bersih dari file cache, file log, atau draf sementara.
+
+==================================================
+PHASE 21
+FINAL REPORT
+==================================================
+
+Tampilkan laporan akhir ringkas dan transparan kepada pengguna:
+- PROJECT STATUS: COMPLETED / IN PROGRESS / BLOCKED
+- ACADEMIC STATUS: Judul, Rumusan, Tujuan, dan Metode Komputasi.
+- SOURCE & CITATION STATUS: Jumlah referensi terverifikasi dan kepatuhan Harvard.
+- DATA & CALCULATION STATUS: Validitas dataset dan hasil komputasi algoritma.
+- SYSTEM & DIAGRAM STATUS: Ketersediaan diagram dan screenshot antarmuka sistem.
+- DOCUMENT STATUS: Jumlah halaman estimasi (minimal 80 halaman), margin 4-4-3-3, dan Word styles.
+- FINAL OUTPUT: Lokasi file akhir di OUTPUT/.
+- UNRESOLVED ITEMS: Daftar hal yang memerlukan konfirmasi atau review dosen pembimbing.
+
+==================================================
+ATURAN EKSEKUSI
+==================================================
+
+Kerjakan secara bertahap dan terencana.
+
+Prioritaskan validitas dan kepatuhan akademik daripada kecepatan instan.
+
+Gunakan file draf per-BAB di folder drafts/ agar terhindar dari pemotongan batas token model.
+
+Manfaatkan skrip Python lokal di AI_program/scripts/ untuk kalkulasi, rendering diagram, pembuatan tabel, kompilasi dokumen, dan audit kualitas.
+
+Mulai sekarang dari PHASE 0.
